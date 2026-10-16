@@ -1,0 +1,62 @@
+{
+  "header": "assets/header-vine.webp",
+  "protein": {
+    "chicken": "assets/protein/chicken.webp",
+    "salmon": "assets/protein/salmon.webp",
+    "turkey": "assets/protein/turkey.webp",
+    "pork": "assets/protein/pork.webp",
+    "steak": "assets/protein/steak.webp",
+    "fish": "assets/protein/fish.webp",
+    "beef": "assets/protein/beef.webp",
+    "vegetarian": "assets/protein/vegetarian.webp"
+  },
+  "mealType": {
+    "bowls": "assets/meal-type/bowls.webp",
+    "pasta": "assets/meal-type/pasta.webp",
+    "soup": "assets/meal-type/soup.webp",
+    "skillet": "assets/meal-type/skillet.webp",
+    "sheet-pan": "assets/meal-type/sheet-pan.webp",
+    "salad": "assets/meal-type/salad.webp"
+  },
+  "glance": {
+    "lemon": "assets/decor/lemon-branch.webp"
+  },
+  "decor": {
+    "favoritesEmpty": "assets/decor/basil.webp",
+    "shoppingEmpty": "assets/decor/herbs.webp",
+    "noResults": "assets/decor/lemon-branch.webp",
+    "listEnd": "assets/decor/olive.webp",
+    "weekRosemary": "assets/decor/rosemary-girl.webp",
+    "favoritesFooter": "assets/decor/garlic.webp"
+  },
+  "recipes": {
+    "sesame-salmon-rice-bowl": "assets/meal-type/bowls.webp",
+    "lemon-herb-salmon-bowl": "assets/meal-type/bowls.webp",
+    "lemon-dijon-chicken-skillet": "assets/meal-type/skillet.webp",
+    "sheet-pan-parmesan-chicken": "assets/meal-type/sheet-pan.webp",
+    "chicken-pasta-light-creamy-pan-sauce": "assets/meal-type/pasta.webp",
+    "turkey-taco-rice-bowl": "assets/meal-type/bowls.webp",
+    "turkey-bolognese": "assets/meal-type/pasta.webp",
+    "rosemary-pork-chops-pan-sauce": "assets/protein/pork.webp",
+    "chicken-and-rice-soup": "assets/meal-type/soup.webp",
+    "steak-dijon-pan-sauce-treat-night": "assets/protein/steak.webp",
+    "balsamic-fig-chicken": "assets/protein/chicken.webp",
+    "crantastic-turkey-burgers": "assets/protein/turkey.webp",
+    "pecan-crusted-chicken": "assets/meal-type/sheet-pan.webp",
+    "coconut-curry-chicken": "assets/meal-type/bowls.webp",
+    "pub-style-shepherds-pie": "assets/meal-type/skillet.webp",
+    "brown-sugar-bourbon-apple-pork-chops-salad": "assets/protein/pork.webp",
+    "brown-sugar-bourbon-apple-pork-chops-mashed": "assets/protein/pork.webp",
+    "silky-sicilian-mushroom-penne": "assets/meal-type/pasta.webp",
+    "italian-garden-veggie-soup": "assets/meal-type/soup.webp",
+    "homemade-chicken-noodle-soup": "assets/meal-type/soup.webp",
+    "vegan-firecracker-mushroom-rice-bowls": "assets/meal-type/bowls.webp",
+    "bacon-mushroom-risotto": "assets/meal-type/bowls.webp",
+    "stuffed-squash-chicken-sausage": "assets/meal-type/sheet-pan.webp",
+    "mediterranean-chicken-grain-bowls": "assets/meal-type/bowls.webp"
+  },
+  "mascot": {
+    "home": "assets/mascot/tilly-cooking-home.webp",
+    "clipboard": "assets/mascot/tilly-clipboard-home.webp"
+  }
+}

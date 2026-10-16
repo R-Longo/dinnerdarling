@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dinner Darling</title>
+  <meta name="description" content="Dinner, decided. Simple weeknight recipes and a three-dinner plan for the week.">
+  <meta name="theme-color" content="#FBF3E4">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/tomato.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Dinner Darling">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="masthead">
+      <div class="lockup">
+        <div class="lockup-text">
+          <h1 class="wordmark">Dinner Darling</h1>
+          <p class="tagline">Dinner, decided.</p>
+        </div>
+        <div class="vine-slot" id="vine" aria-hidden="true"></div>
+      </div>
+    </header>
+
+    <main>
+      <section id="view-home" class="view" aria-label="Home"></section>
+      <section id="view-recipes" class="view" aria-label="Recipes">
+        <div class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+          <input id="q" type="search" placeholder="Search, e.g. chicken skillet" autocomplete="off" enterkeyhint="search" aria-label="Search recipes">
+        </div>
+
+        <h2 class="label">Quick picks</h2>
+        <div class="quick" id="quick" role="group" aria-label="Quick picks"></div>
+
+        <h2 class="label">Main</h2>
+        <div class="proteins" id="proteins" role="group" aria-label="Main"></div>
+
+        <button class="morebtn" id="more-btn" aria-expanded="false" aria-controls="more-panel">
+          <span>More filters</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="morepanel" id="more-panel" hidden>
+          <h3 class="label">Meal type</h3>
+          <div class="chips" id="meals" role="group" aria-label="Meal type"></div>
+          <h3 class="label">Difficulty</h3>
+          <div class="chips" id="levels" role="group" aria-label="Difficulty"></div>
+        </div>
+
+        <p class="count" id="count" aria-live="polite"></p>
+        <div id="list" class="list"></div>
+      </section>
+
+      <section id="view-week" class="view" aria-label="This week" hidden></section>
+      <section id="view-shopping" class="view" aria-label="Shopping list" hidden></section>
+      <section id="view-favorites" class="view" aria-label="Favorites" hidden></section>
+    </main>
+  </div>
+
+  <nav class="tabbar" aria-label="Main">
+    <button class="tab" data-tab="home" aria-current="page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10.5V19h12v-8.5"/><path d="M10 19v-5h4v5"/></svg>
+      <span>Home</span>
+    </button>
+    <button class="tab" data-tab="recipes">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h10a3 3 0 0 1 3 3V20H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h10"/></svg>
+      <span>Recipes</span>
+    </button>
+    <button class="tab" data-tab="week">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5.5" width="16" height="14.5" rx="3"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg>
+      <span>This Week</span>
+      <b class="badge" id="badge" hidden>0</b>
+    </button>
+    <button class="tab" data-tab="shopping">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5h2.2l1.8 9.5h9.3l1.7-6.8H6.4"/><circle cx="9.5" cy="18.6" r="1.2"/><circle cx="16.5" cy="18.6" r="1.2"/></svg>
+      <span>Shopping</span>
+    </button>
+    <button class="tab" data-tab="favorites">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg>
+      <span>Favorites</span>
+    </button>
+  </nav>
+
+  <section id="sheet" class="sheet" role="dialog" aria-modal="true" aria-label="Recipe" hidden></section>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="art.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

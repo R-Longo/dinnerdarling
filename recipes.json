@@ -1,0 +1,3780 @@
+{
+  "schemaVersion": 2,
+  "recipes": [
+    {
+      "id": "sesame-salmon-rice-bowl",
+      "name": "Sesame Salmon Rice Bowl",
+      "description": "Sesame-soy salmon over jasmine rice with cucumber and creamy lime sauce.",
+      "protein": [
+        "salmon"
+      ],
+      "mealType": [
+        "bowls"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "stovetop"
+      ],
+      "timeMinutes": 25,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "salmon",
+          "quantity": 12,
+          "unit": "oz",
+          "aisle": "seafood"
+        },
+        {
+          "item": "jasmine rice",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cucumber",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "soy sauce or tamari",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sesame oil",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "honey or maple syrup",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "mayonnaise",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "lime",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        }
+      ],
+      "instructions": [
+        "Cook the jasmine rice on the stovetop according to package directions.",
+        "Cut the salmon into bite-size pieces.",
+        "Combine soy sauce, sesame oil, and honey. Toss with salmon.",
+        "Pan-sear the salmon until lightly caramelized and cooked through.",
+        "Mix mayonnaise with lime juice and a small splash of soy sauce.",
+        "Divide rice between bowls and top with cucumber, salmon, and sauce."
+      ],
+      "dietaryNotes": [
+        "No onion required",
+        "No garlic required",
+        "Choose additional toppings according to personal tolerance"
+      ],
+      "makeItBougie": [
+        "Avocado",
+        "Edamame",
+        "Spicy mayo",
+        "Sesame seeds"
+      ],
+      "rebeccaNotes": "Use freshly cooked jasmine rice. Do not substitute microwave or parboiled rice.",
+      "leftoverRating": 2,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling"
+      },
+      "art": "sesame-bowl",
+      "prepMinutes": 10,
+      "cookMinutes": 15,
+      "method": "Pan-seared",
+      "flavor": "Savory, sesame, tangy lime",
+      "bestFor": "Weeknight dinner"
+    },
+    {
+      "id": "lemon-herb-salmon-bowl",
+      "name": "Lemon-Herb Salmon Bowl",
+      "description": "Pan-seared salmon over basmati with cucumber, tomatoes, and a lemony yogurt-dill sauce.",
+      "protein": [
+        "salmon"
+      ],
+      "mealType": [
+        "bowls"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "fresh",
+        "stovetop"
+      ],
+      "timeMinutes": 25,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "salmon fillets",
+          "quantity": 12,
+          "unit": "oz",
+          "aisle": "seafood"
+        },
+        {
+          "item": "basmati rice",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "lemon",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "dried oregano",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "plain Greek yogurt",
+          "quantity": 0.33,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "fresh dill or parsley, chopped",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "produce"
+        },
+        {
+          "item": "cucumber",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "cherry tomatoes, halved",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "produce"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Cook the basmati rice on the stovetop according to package directions.",
+        "Pat the salmon dry. Season with salt, pepper, oregano, and the zest of half the lemon.",
+        "Heat the olive oil in a skillet over medium-high. Sear the salmon skin-side down 4 to 5 minutes, flip, and cook 2 to 3 minutes more until just cooked through.",
+        "Stir the yogurt with the juice of half the lemon, the dill, a pinch of salt, and a splash of water to loosen it.",
+        "Slice the cucumber and halve the tomatoes. Flake the salmon into large pieces.",
+        "Divide rice between bowls. Top with cucumber, tomatoes, salmon, and a spoonful of sauce. Serve with a lemon wedge."
+      ],
+      "dietaryNotes": [
+        "No onion required",
+        "Garlic is optional: grate a small clove into the yogurt sauce if wanted",
+        "Swap the tomatoes for more cucumber if they are not a hit"
+      ],
+      "makeItBougie": [
+        "Feta",
+        "Kalamata olives",
+        "Toasted pita",
+        "Flaky salt"
+      ],
+      "rebeccaNotes": "Skin-on salmon crisps beautifully and the skin lifts off easily if anyone would rather skip it. Basmati keeps this bowl lighter than jasmine.",
+      "leftoverRating": 2,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling"
+      },
+      "art": "lemon-herb-bowl",
+      "prepMinutes": 10,
+      "cookMinutes": 15,
+      "method": "Pan-seared",
+      "flavor": "Lemony, fresh, herby",
+      "bestFor": "Light dinner"
+    },
+    {
+      "id": "lemon-dijon-chicken-skillet",
+      "name": "Lemon-Dijon Chicken Skillet",
+      "description": "Golden chicken cutlets in a tangy Dijon pan sauce with wilted spinach, served over rice.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "skillet"
+      ],
+      "tags": [
+        "weeknight",
+        "pan-sauce",
+        "comfort",
+        "stovetop"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "chicken cutlets",
+          "quantity": 1,
+          "unit": "lb",
+          "aisle": "meat"
+        },
+        {
+          "item": "all-purpose flour",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "chicken broth",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Dijon mustard",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "lemon",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "heavy cream or half-and-half",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "baby spinach",
+          "quantity": 3,
+          "unit": "cups",
+          "aisle": "produce"
+        },
+        {
+          "item": "jasmine or basmati rice",
+          "quantity": 0.75,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Cook the rice on the stovetop according to package directions.",
+        "Pat the cutlets dry and season both sides with salt and pepper. Dredge lightly in the flour and shake off the excess.",
+        "Heat the olive oil in a large skillet over medium-high. Cook the chicken 3 to 4 minutes per side until golden and cooked through (165°F). Move to a plate.",
+        "Lower the heat to medium. Add the butter, broth, and Dijon to the pan, scraping up the browned bits. Simmer 3 minutes until slightly reduced.",
+        "Stir in the cream, the juice of half the lemon, and the spinach. Cook 1 minute until the spinach wilts.",
+        "Return the chicken to the pan to coat in sauce. Serve over rice with extra lemon."
+      ],
+      "dietaryNotes": [
+        "No onion required",
+        "Garlic is optional: add one grated clove to the butter before the broth",
+        "Spinach is easy to leave out or cook separately"
+      ],
+      "makeItBougie": [
+        "Capers",
+        "Fresh thyme",
+        "A splash of white wine",
+        "Parmesan"
+      ],
+      "rebeccaNotes": "Thin cutlets cook fast, so pull them as soon as they hit 165°F. Keep the sauce at a gentle simmer so the cream does not break.",
+      "leftoverRating": 3,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling"
+      },
+      "art": "chicken-skillet",
+      "prepMinutes": 10,
+      "cookMinutes": 20,
+      "method": "Pan sauce",
+      "flavor": "Tangy, creamy, bright",
+      "bestFor": "Weeknight dinner"
+    },
+    {
+      "id": "sheet-pan-parmesan-chicken",
+      "name": "Sheet-Pan Parmesan Chicken",
+      "description": "Crispy parmesan-crusted chicken roasted with green beans and cherry tomatoes on one pan.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "sheet-pan"
+      ],
+      "tags": [
+        "weeknight",
+        "one-pan",
+        "crispy"
+      ],
+      "timeMinutes": 35,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "boneless chicken breasts (about 2)",
+          "quantity": 1,
+          "unit": "lb",
+          "aisle": "meat"
+        },
+        {
+          "item": "mayonnaise",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "panko breadcrumbs",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "grated parmesan",
+          "quantity": 0.33,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "Italian seasoning",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "green beans, trimmed",
+          "quantity": 8,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "cherry tomatoes",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "produce"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Heat the oven to 425°F and line a sheet pan with parchment.",
+        "Slice each chicken breast in half horizontally to make 4 thin cutlets. Pat dry and season with salt and pepper.",
+        "Mix the panko, parmesan, and Italian seasoning on a plate. Brush each cutlet with a thin layer of mayonnaise, then press into the crumb mixture.",
+        "Toss the green beans and tomatoes with the olive oil, salt, and pepper. Spread them on one side of the pan and set the chicken on the other.",
+        "Roast 18 to 22 minutes, until the crust is golden and the chicken reaches 165°F.",
+        "Rest the chicken for 3 minutes before serving."
+      ],
+      "dietaryNotes": [
+        "No onion required",
+        "No garlic required",
+        "Swap the green beans for zucchini or asparagus as preferred"
+      ],
+      "makeItBougie": [
+        "Lemon wedges",
+        "Fresh basil",
+        "Warm marinara for dipping",
+        "Burrata"
+      ],
+      "rebeccaNotes": "Mayonnaise is the glue: it browns better than egg and keeps the chicken juicy. Splitting the breasts is what makes this a 35-minute dinner.",
+      "leftoverRating": 3,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling"
+      },
+      "art": "sheet-pan",
+      "prepMinutes": 15,
+      "cookMinutes": 20,
+      "method": "Sheet pan",
+      "flavor": "Crispy, savory, cheesy",
+      "bestFor": "Hands-off dinner"
+    },
+    {
+      "id": "chicken-pasta-light-creamy-pan-sauce",
+      "name": "Chicken Pasta with Light Creamy Pan Sauce",
+      "description": "Seared chicken and pasta in a lemony parmesan pan sauce with spinach and peas.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "pasta"
+      ],
+      "tags": [
+        "weeknight",
+        "comfort",
+        "pan-sauce"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "boneless chicken breast, cut into bite-size pieces",
+          "quantity": 12,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "short pasta (penne or rigatoni)",
+          "quantity": 8,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "chicken broth",
+          "quantity": 0.75,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "half-and-half",
+          "quantity": 0.33,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "grated parmesan",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "lemon",
+          "quantity": 0.5,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "baby spinach",
+          "quantity": 3,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "frozen peas",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "frozen"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Boil the pasta in well-salted water until al dente. Save a half cup of pasta water, then drain.",
+        "Season the chicken with salt and pepper. Heat the olive oil in a large skillet over medium-high and sear the chicken 5 to 6 minutes until browned and cooked through. Move to a plate.",
+        "Lower the heat to medium. Add the butter and broth, scraping up the browned bits. Simmer 3 minutes.",
+        "Stir in the half-and-half and parmesan until smooth. Add the peas and spinach and cook 1 minute.",
+        "Add the pasta and chicken to the pan. Toss, loosening with pasta water as needed.",
+        "Finish with a squeeze of lemon and plenty of black pepper."
+      ],
+      "dietaryNotes": [
+        "No onion required",
+        "Garlic is optional: add a grated clove with the butter",
+        "Peas and spinach can be swapped or omitted"
+      ],
+      "makeItBougie": [
+        "Crispy prosciutto",
+        "Sun-dried tomatoes",
+        "Fresh basil",
+        "Chili flakes"
+      ],
+      "rebeccaNotes": "Half-and-half keeps the sauce light but it still clings to the pasta. Pasta water does the rest.",
+      "leftoverRating": 2,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling"
+      },
+      "art": "pasta",
+      "prepMinutes": 10,
+      "cookMinutes": 20,
+      "method": "Pan sauce",
+      "flavor": "Lemony, creamy, light",
+      "bestFor": "Cozy weeknight"
+    },
+    {
+      "id": "turkey-taco-rice-bowl",
+      "name": "Turkey Taco Rice Bowl",
+      "description": "Seasoned ground turkey over jasmine rice with black beans, corn, and a pile of toppings.",
+      "protein": [
+        "turkey"
+      ],
+      "mealType": [
+        "bowls"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "customizable"
+      ],
+      "timeMinutes": 25,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "ground turkey",
+          "quantity": 1,
+          "unit": "lb",
+          "aisle": "meat"
+        },
+        {
+          "item": "jasmine rice",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "chili powder",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "ground cumin",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "smoked paprika",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt",
+          "quantity": 0.75,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "black beans, drained and rinsed",
+          "quantity": 1,
+          "unit": "can (15 oz)",
+          "aisle": "pantry"
+        },
+        {
+          "item": "frozen corn",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "frozen"
+        },
+        {
+          "item": "lime",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "salsa",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "shredded cheddar",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "shredded romaine",
+          "quantity": 2,
+          "unit": "cups",
+          "aisle": "produce"
+        },
+        {
+          "item": "sour cream or Greek yogurt",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        }
+      ],
+      "instructions": [
+        "Cook the jasmine rice on the stovetop according to package directions.",
+        "Heat the olive oil in a large skillet over medium-high. Add the turkey and break it up as it browns, 6 to 8 minutes.",
+        "Stir in the chili powder, cumin, paprika, and salt. Add a splash of water and cook 1 minute until the spices coat the meat.",
+        "Add the beans and corn and cook 3 minutes until heated through. Finish with the juice of half the lime.",
+        "Stir the rest of the lime juice into the sour cream with a pinch of salt.",
+        "Divide rice between bowls. Top with turkey, romaine, cheese, salsa, and the lime sour cream."
+      ],
+      "dietaryNotes": [
+        "No onion required",
+        "No garlic required",
+        "Build-your-own toppings: everyone picks their own"
+      ],
+      "makeItBougie": [
+        "Avocado",
+        "Crushed tortilla chips",
+        "Cotija",
+        "Pickled jalapeños",
+        "Hot honey"
+      ],
+      "rebeccaNotes": "Make the full pound and use the extra turkey for quesadillas or lunch bowls. Mix the spices into a little water first for even coverage.",
+      "leftoverRating": 3,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling"
+      },
+      "art": "taco-bowl",
+      "prepMinutes": 10,
+      "cookMinutes": 15,
+      "method": "Skillet",
+      "flavor": "Smoky, zesty, build-your-own",
+      "bestFor": "Everyone's own toppings"
+    },
+    {
+      "id": "turkey-bolognese",
+      "name": "Turkey Bolognese",
+      "description": "A quick, rich tomato-meat sauce with grated carrot and a splash of milk, tossed with pasta.",
+      "protein": [
+        "turkey"
+      ],
+      "mealType": [
+        "pasta"
+      ],
+      "tags": [
+        "comfort",
+        "weeknight",
+        "freezer-friendly"
+      ],
+      "timeMinutes": 40,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "ground turkey",
+          "quantity": 1,
+          "unit": "lb",
+          "aisle": "meat"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "carrot, grated",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "yellow onion, finely diced (optional)",
+          "quantity": 0.5,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "tomato paste",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "crushed tomatoes",
+          "quantity": 1,
+          "unit": "can (15 oz)",
+          "aisle": "pantry"
+        },
+        {
+          "item": "whole milk",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "Italian seasoning",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "spaghetti or rigatoni",
+          "quantity": 8,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "grated parmesan",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Heat the olive oil in a large skillet over medium. Cook the onion (if using) and carrot 4 to 5 minutes until soft.",
+        "Add the turkey and brown it, breaking it up, 6 to 8 minutes. Season with salt, pepper, and Italian seasoning.",
+        "Stir in the tomato paste and cook 2 minutes until it darkens slightly.",
+        "Add the crushed tomatoes and milk. Simmer on low, partly covered, 15 to 20 minutes.",
+        "Meanwhile, boil the pasta in well-salted water until al dente. Save a half cup of pasta water, then drain.",
+        "Toss the pasta with the sauce, loosening with pasta water. Serve with parmesan."
+      ],
+      "dietaryNotes": [
+        "No raw onion. Cooked onion is optional and can be skipped",
+        "Garlic is optional: add one clove with the carrot",
+        "The grated carrot melts into the sauce"
+      ],
+      "makeItBougie": [
+        "Fresh basil",
+        "Ricotta dollop",
+        "Pappardelle instead of spaghetti",
+        "Chili flakes"
+      ],
+      "rebeccaNotes": "Milk mellows the tomato acidity, so do not skip it. The sauce freezes well and tastes better the next day.",
+      "leftoverRating": 3,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling"
+      },
+      "art": "bolognese",
+      "prepMinutes": 10,
+      "cookMinutes": 30,
+      "method": "Skillet",
+      "flavor": "Rich, tomato-y, mellow",
+      "bestFor": "Leftovers"
+    },
+    {
+      "id": "rosemary-pork-chops-pan-sauce",
+      "name": "Rosemary Pork Chops with Pan Sauce",
+      "description": "Seared pork chops in a buttery rosemary-Dijon pan sauce, with crisp-edged baby potatoes.",
+      "protein": [
+        "pork"
+      ],
+      "mealType": [
+        "skillet"
+      ],
+      "tags": [
+        "weeknight",
+        "pan-sauce",
+        "comfort",
+        "stovetop"
+      ],
+      "timeMinutes": 35,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "boneless pork chops, about 1 inch thick",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "meat"
+        },
+        {
+          "item": "baby potatoes, halved",
+          "quantity": 12,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "fresh rosemary, chopped",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "produce"
+        },
+        {
+          "item": "butter",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "chicken broth",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Dijon mustard",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "apple cider vinegar",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Set the pork chops out for 15 minutes. Pat dry and season generously with salt, pepper, and half the rosemary.",
+        "Put the potatoes in a skillet with 1 tablespoon of the oil, a pinch of salt, and a half cup of water. Cover and cook on medium 10 minutes until tender, then uncover and cook until the water is gone and the cut sides turn golden. Move to a plate.",
+        "Wipe out the skillet and heat the remaining oil over medium-high. Sear the chops 4 to 5 minutes per side, until they reach 145°F. Move to a plate and rest 5 minutes.",
+        "Lower the heat to medium. Add the broth, Dijon, vinegar, and remaining rosemary, scraping up the browned bits. Simmer 3 minutes.",
+        "Whisk in the butter off the heat until glossy.",
+        "Spoon the sauce over the chops and serve with the potatoes."
+      ],
+      "dietaryNotes": [
+        "No onion required",
+        "No garlic required",
+        "Use 1 teaspoon dried rosemary if fresh is unavailable"
+      ],
+      "makeItBougie": [
+        "Apple slices in the sauce",
+        "Flaky salt",
+        "Crispy sage",
+        "Roasted green beans"
+      ],
+      "rebeccaNotes": "Do not cook pork past 145°F: it should be a little pink and juicy. Thicker chops need the full resting time.",
+      "leftoverRating": 2,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling"
+      },
+      "art": "pork-chop",
+      "prepMinutes": 10,
+      "cookMinutes": 25,
+      "method": "Pan sauce",
+      "flavor": "Savory, herby, buttery",
+      "bestFor": "Slow evening"
+    },
+    {
+      "id": "chicken-and-rice-soup",
+      "name": "Chicken & Rice Soup",
+      "description": "A cozy brothy soup with tender shredded chicken, carrots, celery, and rice cooked right in the pot.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "soup"
+      ],
+      "tags": [
+        "comfort",
+        "cozy",
+        "freezer-friendly",
+        "stovetop"
+      ],
+      "timeMinutes": 40,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "boneless chicken breast",
+          "quantity": 12,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "chicken broth",
+          "quantity": 4,
+          "unit": "cups",
+          "aisle": "pantry"
+        },
+        {
+          "item": "water",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": ""
+        },
+        {
+          "item": "carrots, sliced",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "celery ribs, sliced",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "jasmine or long-grain white rice (uncooked)",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "dried thyme",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "bay leaf",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "pantry"
+        },
+        {
+          "item": "lemon",
+          "quantity": 0.5,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh parsley, chopped",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "produce"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Heat the olive oil in a large pot over medium. Cook the carrots and celery 4 to 5 minutes until they start to soften.",
+        "Add the broth, water, thyme, bay leaf, and chicken breast. Bring to a gentle simmer.",
+        "Simmer 12 to 15 minutes until the chicken is cooked through (165°F). Lift it out and shred with two forks.",
+        "Stir the rice into the pot and simmer 12 to 15 minutes, uncovered, until tender.",
+        "Return the chicken to the pot. Remove the bay leaf. Season with salt and pepper and squeeze in lemon juice.",
+        "Ladle into bowls and top with parsley."
+      ],
+      "dietaryNotes": [
+        "No onion required",
+        "No garlic required",
+        "Use long-grain white rice. Parboiled rice is not a good fit here"
+      ],
+      "makeItBougie": [
+        "Parmesan rind in the broth",
+        "Fresh dill",
+        "Buttered toast for dunking",
+        "Soft-boiled egg"
+      ],
+      "rebeccaNotes": "The rice keeps absorbing broth as it sits, so add a splash of water or broth when reheating leftovers.",
+      "leftoverRating": 3,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling"
+      },
+      "art": "soup",
+      "prepMinutes": 10,
+      "cookMinutes": 30,
+      "method": "Simmered",
+      "flavor": "Cozy, brothy, bright",
+      "bestFor": "Cold nights"
+    },
+    {
+      "id": "steak-dijon-pan-sauce-treat-night",
+      "name": "Steak with Dijon Pan Sauce",
+      "description": "Seared steak with a quick Dijon-cream pan sauce and a lemony arugula salad. A treat-night dinner.",
+      "protein": [
+        "steak"
+      ],
+      "mealType": [
+        "skillet"
+      ],
+      "tags": [
+        "treat-night",
+        "date-night",
+        "pan-sauce",
+        "stovetop"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "medium",
+      "cost": "$$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "ribeye or NY strip steaks (about 8 oz each)",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "meat"
+        },
+        {
+          "item": "avocado or olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "fresh thyme",
+          "quantity": 3,
+          "unit": "sprigs",
+          "aisle": "produce"
+        },
+        {
+          "item": "beef broth",
+          "quantity": 0.33,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Dijon mustard",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "heavy cream",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "baby arugula",
+          "quantity": 3,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "lemon",
+          "quantity": 0.5,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "olive oil (for salad)",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "flaky salt and black pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Take the steaks out of the fridge 30 minutes before cooking. Pat very dry and season generously with salt and pepper.",
+        "Heat the oil in a heavy skillet over high until it just starts to smoke. Sear the steaks 3 to 4 minutes per side for medium-rare (130 to 135°F), adding 1 tablespoon butter and the thyme for the last minute and spooning it over.",
+        "Move the steaks to a board and rest 8 to 10 minutes. Pour off all but 1 teaspoon of fat from the pan.",
+        "Lower the heat to medium. Add the broth and Dijon, scraping up the browned bits. Simmer 2 minutes.",
+        "Stir in the cream and simmer 1 to 2 minutes until it coats a spoon. Whisk in the remaining butter and any resting juices.",
+        "Toss the arugula with lemon juice, olive oil, and a pinch of salt. Slice the steak, spoon over the sauce, and serve with the salad."
+      ],
+      "dietaryNotes": [
+        "No onion required",
+        "No garlic required",
+        "Cook to preferred doneness: 125°F rare, 130 to 135°F medium-rare, 140°F medium"
+      ],
+      "makeItBougie": [
+        "Shaved parmesan on the salad",
+        "Crispy shallots",
+        "Pommes purée",
+        "Red wine in the sauce"
+      ],
+      "rebeccaNotes": "Pat the steak dry and do not move it while it sears. Turn the vent fan on and open a window.",
+      "leftoverRating": 1,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling"
+      },
+      "art": "steak",
+      "prepMinutes": 10,
+      "cookMinutes": 20,
+      "method": "Pan sauce",
+      "flavor": "Rich, tangy, peppery",
+      "bestFor": "Treat night"
+    },
+    {
+      "id": "balsamic-fig-chicken",
+      "name": "Balsamic Fig Chicken",
+      "description": "Seared chicken in a sweet-tangy balsamic fig pan sauce with roasted sweet potatoes and a lemony green salad.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "skillet",
+        "sheet-pan"
+      ],
+      "tags": [
+        "weeknight",
+        "pan-sauce",
+        "roasted",
+        "fresh"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "chicken breasts",
+          "quantity": 12,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "sweet potatoes",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "shallot",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh rosemary",
+          "quantity": 0.25,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "lemon",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "balsamic vinegar",
+          "quantity": 5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "fig jam",
+          "quantity": 0.5,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon chicken base",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "mixed greens",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 4,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Preheat the oven to 425°F. Cut the sweet potatoes into ½-inch cubes, toss on a baking sheet with olive oil, salt, and pepper, and roast 20 to 25 minutes until tender and crisp at the edges.",
+        "Mince the shallot, chop enough rosemary leaves for 1 tsp, and halve the lemon.",
+        "Heat a drizzle of oil in a large pan over medium-high. Pat the chicken dry, season with salt and pepper, and cook 5 to 7 minutes per side until no longer pink. Set aside to rest.",
+        "Lower the heat to medium. Add the shallot, rosemary, and a little oil and cook 2 to 3 minutes. Stir in the balsamic vinegar and half the fig jam and simmer about 1 minute until syrupy. Add ½ cup water and the chicken base and reduce about 3 minutes. Off the heat, stir in the butter and season.",
+        "Toss the greens with a squeeze of lemon, a drizzle of olive oil, salt, and pepper.",
+        "Slice the chicken. Plate it with the sweet potatoes, spoon the sauce over, and serve the salad alongside."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 2,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Balsamic Fig Chicken with Sweet Potatoes and Mixed Greens",
+        "url": "https://www.hellofresh.com/recipes/balsamic-fig-chicken-5b916bb630006c580d6543f2"
+      },
+      "art": "chicken-skillet",
+      "prepMinutes": 10,
+      "cookMinutes": 20,
+      "method": "Skillet + roast",
+      "flavor": "Sweet, tangy, herby",
+      "bestFor": "Weeknight dinner"
+    },
+    {
+      "id": "crantastic-turkey-burgers",
+      "name": "Crantastic Turkey Burgers",
+      "description": "Sage-and-thyme turkey burgers on toasted potato buns with cranberry mayo and a pecan-cranberry green salad.",
+      "protein": [
+        "turkey"
+      ],
+      "mealType": [
+        "skillet"
+      ],
+      "tags": [
+        "weeknight",
+        "burger",
+        "pan-seared"
+      ],
+      "timeMinutes": 35,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "fresh sage",
+          "quantity": 0.25,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "shallot",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "ground turkey",
+          "quantity": 10,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "dried thyme",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "panko breadcrumbs",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "mayonnaise",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "cranberry jam",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "potato buns",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "bakery"
+        },
+        {
+          "item": "mixed greens",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "dried cranberries",
+          "quantity": 1,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "pecans",
+          "quantity": 1,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "balsamic vinegar",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Preheat the grill to high or the oven to 400°F. Mince enough sage for 1½ tsp and grate the shallot into a medium bowl.",
+        "Add the turkey, sage, thyme, panko, and about ½ tsp kosher salt plus pepper. Mix with your hands until just combined and form two patties slightly wider than the buns.",
+        "Heat a drizzle of oil in a large pan over medium-high. Cook the patties 5 to 6 minutes per side until no longer pink in the center (or grill them over direct heat).",
+        "Meanwhile, stir the mayonnaise and cranberry jam together and season. Split the buns and toast them in the oven 3 to 5 minutes until golden.",
+        "Toss the greens, dried cranberries, pecans, balsamic vinegar, and a drizzle of oil in a large bowl. Season.",
+        "Spread the cranberry mayo on the buns, fill each with a patty and a handful of salad, and serve the rest of the salad on the side."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 2,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Crantastic Turkey Burgers with Jammy Mayo and a Green Salad",
+        "url": "https://www.hellofresh.com/recipes/crantastic-turkey-burgers-59669b10043c3c7d9e0e9da2"
+      },
+      "art": "chicken-skillet",
+      "prepMinutes": 15,
+      "cookMinutes": 20,
+      "method": "Pan-seared",
+      "flavor": "Savory, sweet, herby",
+      "bestFor": "Cozy weeknight"
+    },
+    {
+      "id": "pecan-crusted-chicken",
+      "name": "Pecan-Crusted Chicken",
+      "description": "Crispy pecan-panko chicken cutlets with a honey mustard sauce and a lemony apple salad.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "sheet-pan"
+      ],
+      "tags": [
+        "weeknight",
+        "crispy",
+        "oven-baked"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "pecans",
+          "quantity": 2.5,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "panko breadcrumbs",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "paprika",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "garlic powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "onion powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Dijon mustard",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "honey",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "mayonnaise",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "chicken cutlets",
+          "quantity": 10,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "apple",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "lemon",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "mixed greens",
+          "quantity": 2,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Set an oven rack in the middle and preheat to 450°F. Finely chop the pecans (or crush them in their bag with a heavy pan).",
+        "Make the fry seasoning by mixing the paprika, garlic powder, onion powder, and a pinch of salt. Melt the butter in a medium bowl (30 seconds in the microwave works), let it cool slightly, then mix in the pecans, panko, half the seasoning, a drizzle of olive oil, salt, and pepper.",
+        "Stir the honey, Dijon, and mayonnaise together in a small bowl.",
+        "Pat the chicken dry and season with the remaining seasoning, salt, and pepper. Set on a lightly oiled baking sheet, spread a thin layer of honey mustard on top, and press the pecan mixture on firmly. Roast 15 to 20 minutes until golden and cooked through.",
+        "Halve, core, and thinly slice the apple and quarter the lemon. Toss the greens and apple with a drizzle of olive oil and lemon juice, salt, and pepper.",
+        "Divide the chicken and salad between plates, drizzle the chicken with the remaining honey mustard, and serve with lemon wedges."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 2,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Pecan-Crusted Chicken with Honey Mustard Sauce & Lemony Apple Salad",
+        "url": "https://www.hellofresh.com/recipes/pecan-crusted-chicken-5e13435f1ffc032efe010db9"
+      },
+      "art": "sheet-pan",
+      "prepMinutes": 10,
+      "cookMinutes": 20,
+      "method": "Oven-baked",
+      "flavor": "Crunchy, sweet, tangy",
+      "bestFor": "Easy weeknight"
+    },
+    {
+      "id": "bacon-zucchini-tomato-flatbreads",
+      "name": "Bacon, Zucchini & Tomato Flatbreads",
+      "description": "Crisp flatbreads with lemon ricotta, browned zucchini, blistered tomatoes, bacon, fresh herbs, and a drizzle of honey.",
+      "protein": [
+        "pork"
+      ],
+      "mealType": [
+        "flatbread-pizza"
+      ],
+      "tags": [
+        "weeknight",
+        "quick",
+        "oven-baked"
+      ],
+      "timeMinutes": 25,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "bacon",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "flatbreads",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "bakery"
+        },
+        {
+          "item": "zucchini",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh parsley",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh chives",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "produce"
+        },
+        {
+          "item": "lemon",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "ricotta cheese",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "grape tomatoes",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "honey",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "garlic clove",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Preheat the oven to 450°F with a lightly oiled baking sheet on the top rack. Slice the zucchini into half-moons, halve the tomatoes, mince the garlic, and zest and quarter the lemon. Cook the bacon in a large pan over medium-high 6 to 10 minutes until crispy, turning now and then. Drain on paper towels, chop when cool, and wipe out the pan.",
+        "Heat a little oil in the pan over medium-high and cook the zucchini 5 to 6 minutes, stirring, until lightly browned. Season with salt and pepper.",
+        "Toss the tomatoes with the garlic, a drizzle of oil, salt, and pepper.",
+        "Stir the ricotta with half the lemon zest, ½ tsp olive oil, and lemon juice to taste. Season.",
+        "Set the flatbreads on the hot baking sheet. Spread with the lemon ricotta and top with the zucchini and tomatoes. Bake 10 to 12 minutes until golden, then top with the bacon.",
+        "Chop the parsley and mince the chives. Scatter them over the flatbreads with the remaining zest, drizzle with honey, slice, and serve with lemon wedges."
+      ],
+      "dietaryNotes": [
+        "Garlic is optional"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 2,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Bacon, Zucchini & Tomato Flatbreads with Lemon Ricotta, Fresh Herbs & Honey",
+        "url": "https://www.hellofresh.com/recipes/bacon-zucchini-tomato-flatbreads-61e852393e01b64c8a24f713"
+      },
+      "art": "flatbread",
+      "prepMinutes": 10,
+      "cookMinutes": 15,
+      "method": "Oven-baked",
+      "flavor": "Bright, salty, sweet",
+      "bestFor": "Light dinner"
+    },
+    {
+      "id": "coconut-curry-chicken",
+      "name": "Coconut Curry Chicken",
+      "description": "Tender chicken and bell pepper in a creamy coconut curry sauce over fluffy basmati rice.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "bowls"
+      ],
+      "tags": [
+        "weeknight",
+        "curry",
+        "comfort",
+        "stovetop"
+      ],
+      "timeMinutes": 25,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "chicken breast, diced",
+          "quantity": 10,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "tomato paste",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "curry powder",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "paprika",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "coconut milk",
+          "quantity": 0.67,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "chili flakes",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "scallions",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "bell pepper",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "basmati rice",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sugar",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Combine the rice, ¾ cup water, and a pinch of salt in a small pot. Bring to a boil, cover, reduce the heat to low, and simmer 15 to 18 minutes until tender. Keep covered off the heat.",
+        "Core, seed, and dice the bell pepper into 1-inch pieces. Slice the scallions, keeping whites and greens separate. Heat oil in a large pan over medium-high, add the pepper with salt and pepper, and cook 5 to 7 minutes, stirring. After 5 minutes add the scallion whites. Move to a plate and wash the pan.",
+        "Pat the chicken dry and season. Heat oil in the pan over medium-high and cook the chicken 4 to 6 minutes, stirring now and then, until browned and cooked through. Lower the heat to medium.",
+        "Add the tomato paste, curry powder, paprika, and chili flakes and cook 1 minute, stirring, until fragrant.",
+        "Stir in the coconut milk, ¼ cup water, the sugar, butter, and a pinch of salt. Bring to a simmer, reduce the heat to low, and cook 2 to 3 minutes until thickened. Stir in the pepper mixture and sour cream, then taste and season.",
+        "Fluff the rice with a fork and season. Divide between bowls, top with the curry, and garnish with chili flakes and scallion greens."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 3,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Coconut Curry Chicken with Bell Pepper over Basmati Rice",
+        "url": "https://www.hellofresh.com/recipes/coconut-curry-chicken-67043da399e8e2a18bd761f9"
+      },
+      "art": "taco-bowl",
+      "prepMinutes": 10,
+      "cookMinutes": 15,
+      "method": "Stovetop curry",
+      "flavor": "Creamy, warm, mildly spicy",
+      "bestFor": "Cozy weeknight"
+    },
+    {
+      "id": "pub-style-shepherds-pie",
+      "name": "Pub-Style Shepherd's Pie",
+      "description": "Savory beef and vegetable filling under thyme mashed potatoes and browned white cheddar.",
+      "protein": [
+        "beef"
+      ],
+      "mealType": [
+        "skillet"
+      ],
+      "tags": [
+        "comfort",
+        "stovetop",
+        "broiled",
+        "freezer-friendly"
+      ],
+      "timeMinutes": 50,
+      "difficulty": "hard",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "ground beef",
+          "quantity": 10,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "potatoes",
+          "quantity": 16,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "carrot",
+          "quantity": 2.5,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh thyme",
+          "quantity": 0.25,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "onion",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "white cheddar cheese, shredded",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "crushed tomatoes",
+          "quantity": 0.5,
+          "unit": "can (14 oz)",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon beef base",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "all-purpose flour",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "garlic powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "celery",
+          "quantity": 2.5,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "butter",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Heat the broiler to high. Dice the potatoes into ½-inch pieces. Chop the thyme leaves. Halve the carrot lengthwise and slice into ¼-inch half-moons. Finely dice the celery and onion.",
+        "Put the potatoes in a medium pot with salted water to cover by 2 inches. Boil 15 to 20 minutes until tender, then drain. Mash with the sour cream, 1 tsp thyme, and the butter until smooth. Season and keep covered.",
+        "Heat oil in a medium oven-safe pan over medium-high. Add the carrot, season, and cook 2 to 3 minutes. Add the celery, onion, and a little more oil and cook 5 to 7 minutes until tender. Stir in the garlic powder and 2 tsp thyme and cook 30 seconds.",
+        "Add the beef, season, and cook 4 to 6 minutes until browned. Stir in the flour and cook 1 minute.",
+        "Add the crushed tomatoes and ½ cup water, then stir in the beef base (with a little extra water if needed). Bring to a boil and cook 1 to 2 minutes until very thick. Season.",
+        "Spoon the mashed potatoes over the filling, leaving a small gap at the edge. Sprinkle with the cheddar and broil 3 to 4 minutes until browned. Serve from the pan."
+      ],
+      "dietaryNotes": [
+        "Hard recipe; plan a little extra time"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 3,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Pub-Style Shepherd's Pie with White Cheddar & Thyme Mashed Potatoes",
+        "url": "https://www.hellofresh.com/recipes/pub-style-shepherds-pie-625ee88a9b06323fa227b866"
+      },
+      "art": "chicken-skillet",
+      "prepMinutes": 15,
+      "cookMinutes": 35,
+      "method": "Stovetop & broil",
+      "flavor": "Hearty, savory, cheesy",
+      "bestFor": "Cold-night comfort"
+    },
+    {
+      "id": "brown-sugar-bourbon-apple-pork-chops-salad",
+      "name": "Brown Sugar Bourbon Apple Pork Chops with Salad",
+      "description": "Seared pork chops with a warm apple pan sauce, roasted green beans, and a walnut salad with honey Dijon dressing.",
+      "protein": [
+        "pork"
+      ],
+      "mealType": [
+        "skillet"
+      ],
+      "tags": [
+        "weeknight",
+        "pan-sauce",
+        "quick"
+      ],
+      "timeMinutes": 25,
+      "difficulty": "medium",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "pork chops",
+          "quantity": 6,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "apple",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "green beans",
+          "quantity": 8,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "scallions",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "Better Than Bouillon chicken base",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "McCormick Grill Mates Brown Sugar Bourbon Seasoning",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "honey Dijon vinaigrette",
+          "quantity": 3,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "mixed greens",
+          "quantity": 2,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "walnuts",
+          "quantity": 0.5,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sugar",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Preheat the oven to 425°F with a rack in the middle. Trim the green beans, toss on a baking sheet with olive oil, salt, and pepper.",
+        "Pat the pork dry and season with the bourbon seasoning. Heat the cooking oil in a large pan over medium-high and cook the pork 4 to 6 minutes per side until browned and cooked through. Move to a plate and wipe out the pan.",
+        "Roast the green beans 12 to 15 minutes until lightly browned. Meanwhile, dice the apple into ¼-inch pieces and slice the scallions, keeping whites and greens separate.",
+        "Melt the butter in the pan over medium-high. Add the apple and scallion whites, season, and cook 4 to 6 minutes until golden. Stir in the chicken base, ½ cup water, and the sugar and cook 5 to 7 minutes until the sauce thickens and the apple is tender. Return the pork to the pan for the last 2 minutes to warm through. Season.",
+        "Toss the greens and walnuts with the dressing (start with half).",
+        "Divide the pork, salad, and green beans between plates. Spoon the apple sauce over the pork and garnish with scallion greens."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 2,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Brown Sugar Bourbon Apple Pork Chops with Honey Dijon Salad & Green Beans",
+        "url": "https://www.hellofresh.com/recipes/brown-sugar-bourbon-apple-pork-chops-6226147249990671902672e7"
+      },
+      "art": "pork-chop",
+      "prepMinutes": 10,
+      "cookMinutes": 15,
+      "method": "Pan-seared + roast",
+      "flavor": "Sweet, smoky, tangy",
+      "bestFor": "Quick weeknight"
+    },
+    {
+      "id": "brown-sugar-bourbon-apple-pork-chops-mashed",
+      "name": "Brown Sugar Bourbon Apple Pork Chops with Mashed Potatoes",
+      "description": "Seared pork chops with apple pan sauce, scallion mashed potatoes, and roasted green beans.",
+      "protein": [
+        "pork"
+      ],
+      "mealType": [
+        "skillet"
+      ],
+      "tags": [
+        "weeknight",
+        "pan-sauce",
+        "comfort"
+      ],
+      "timeMinutes": 35,
+      "difficulty": "medium",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "pork chops",
+          "quantity": 10,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "potatoes",
+          "quantity": 12,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "green beans",
+          "quantity": 6,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "apple",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "scallions",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "McCormick Grill Mates Brown Sugar Bourbon Seasoning",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon chicken base",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 1.5,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sugar",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Preheat the oven to 425°F. Dice the potatoes into ½-inch pieces and boil in salted water 15 to 20 minutes until tender. Save ½ cup of the cooking water, drain, and keep covered.",
+        "Pat the pork dry and season with the bourbon seasoning. Sear in oiled large pan over medium-high 4 to 6 minutes per side until cooked through (145°F). Move to a plate and wipe out the pan.",
+        "Toss the green beans with olive oil, salt, and pepper on a baking sheet and roast 12 to 15 minutes. Meanwhile, dice the apple into ¼-inch pieces and slice the scallions, keeping whites and greens separate.",
+        "Melt 1 tbsp butter in the pan over medium-high. Add the apple and scallion whites and cook 4 to 6 minutes until golden. Stir in the chicken base, ½ cup water, and the sugar and simmer 5 to 7 minutes until thickened. Return the pork to warm through and season.",
+        "Mash the potatoes until mostly smooth. Stir in the scallion greens, sour cream, 1 tbsp butter, and a splash of the potato cooking water. Season.",
+        "Plate the pork with the potatoes and green beans and spoon the apple pan sauce over the pork."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 2,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Brown Sugar Bourbon Apple Pork Chops with Apple Pan Sauce, Scallion Mashed Potatoes & Green Beans",
+        "url": "https://www.hellofresh.com/recipes/brown-sugar-bourbon-apple-pork-chops-64b69f708c02aa0344141119"
+      },
+      "art": "pork-chop",
+      "prepMinutes": 10,
+      "cookMinutes": 25,
+      "method": "Pan-seared + roast",
+      "flavor": "Sweet, smoky, comforting",
+      "bestFor": "Sunday-style dinner"
+    },
+    {
+      "id": "silky-sicilian-mushroom-penne",
+      "name": "Silky Sicilian Mushroom Penne",
+      "description": "Penne with browned zucchini and mushrooms in a lemony crème fraîche sauce.",
+      "protein": [
+        "vegetarian"
+      ],
+      "mealType": [
+        "pasta"
+      ],
+      "tags": [
+        "weeknight",
+        "creamy",
+        "vegetarian",
+        "comfort"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "zucchini",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "cremini mushrooms",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "grape tomatoes",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh chives",
+          "quantity": 0.25,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "lemon",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "penne pasta",
+          "quantity": 6,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Italian seasoning",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon mushroom base",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "crème fraîche",
+          "quantity": 4,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "grated Parmesan",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 4,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Bring a large pot of salted water to a boil. Quarter the zucchini lengthwise and cut into ½-inch pieces. Thinly slice the mushrooms, halve the tomatoes, mince the chives, and quarter the lemon.",
+        "Heat olive oil in a large pan over medium-high. Cook the zucchini with salt and pepper 4 to 6 minutes until golden and softened. Move to a bowl.",
+        "Add more oil and cook the mushrooms 5 to 7 minutes until golden and crisp. Season and add to the zucchini. Wash the pan.",
+        "Cook the penne in the boiling water 9 to 11 minutes until al dente. Save 1 cup of pasta water, then drain.",
+        "Melt 1 tbsp butter with a little olive oil in the pan over medium-high. Add the tomatoes, salt, pepper, and Italian seasoning and cook 2 to 4 minutes until softened. Stir in half the chives and the lemon juice, lower the heat, then stir in the mushroom base and ¼ cup pasta water. Whisk in the crème fraîche and season.",
+        "Add the zucchini, mushrooms, and penne to the sauce with the remaining 1 tbsp butter, adding pasta water if needed. Divide between plates and top with Parmesan, the remaining chives, and lemon wedges."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 2,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Silky Sicilian Mushroom Penne tossed with Veggies in a Cream Sauce",
+        "url": "https://www.hellofresh.com/recipes/silky-sicilian-mushroom-penne-5e39c13ff1e8243dda35c94f"
+      },
+      "art": "pasta",
+      "prepMinutes": 10,
+      "cookMinutes": 20,
+      "method": "Stovetop pasta",
+      "flavor": "Creamy, lemony, savory",
+      "bestFor": "Meatless night"
+    },
+    {
+      "id": "one-pan-santa-fe-pork-tacos",
+      "name": "One-Pan Santa Fe Pork Tacos",
+      "description": "Spiced ground pork tacos with melty Monterey Jack, a creamy cilantro-lemon slaw, and a squeeze of lemon.",
+      "protein": [
+        "pork"
+      ],
+      "mealType": [
+        "tacos"
+      ],
+      "tags": [
+        "weeknight",
+        "quick",
+        "one-pan",
+        "stovetop"
+      ],
+      "timeMinutes": 20,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "yellow onion",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh cilantro",
+          "quantity": 0.25,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "lemon",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "ground pork",
+          "quantity": 10,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "chili powder",
+          "quantity": 1.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cumin",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "garlic powder",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "shredded red cabbage",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "mayonnaise",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "Better Than Bouillon Sofrito base",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon Chipotle base",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "flour tortillas",
+          "quantity": 6,
+          "unit": "",
+          "aisle": "bakery"
+        },
+        {
+          "item": "shredded Monterey Jack",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "sugar",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Halve, peel, and finely dice the onion. Finely chop the cilantro and quarter the lemon.",
+        "Heat oil in a large pan over medium-high. Cook the onion with a pinch of salt 2 to 3 minutes until slightly softened and lightly browned. Add the pork with the chili powder, cumin, and garlic powder, breaking it into pieces, and cook 4 to 6 minutes until browned through. Pour off excess grease if needed.",
+        "In a large bowl, combine the cabbage, mayonnaise, half the cilantro, the juice of half the lemon, the sugar, salt, and pepper.",
+        "Stir the Sofrito and Chipotle bases into the pork until coated. Taste and season.",
+        "Wrap the tortillas in damp paper towels and microwave 30 seconds.",
+        "Fill the tortillas with the pork, Monterey Jack, slaw, a spoonful of sour cream, and the remaining cilantro. Serve with lemon wedges."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 1,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "One-Pan Santa Fe Pork Tacos with Monterey Jack & Cilantro Lemon Slaw",
+        "url": "https://www.hellofresh.com/recipes/one-pan-santa-fe-pork-tacos-66c378ee5cb721784e63693f"
+      },
+      "art": "tacos",
+      "prepMinutes": 10,
+      "cookMinutes": 10,
+      "method": "One pan",
+      "flavor": "Smoky, tangy, fresh",
+      "bestFor": "Fast taco night"
+    },
+    {
+      "id": "citrus-pork-tacos",
+      "name": "Citrus Pork Tacos",
+      "description": "Orange- and lime-simmered ground pork tacos with peppers, quick pickled onion, and a drizzle of Southwest crema.",
+      "protein": [
+        "pork"
+      ],
+      "mealType": [
+        "tacos"
+      ],
+      "tags": [
+        "weeknight",
+        "stovetop"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "ground pork",
+          "quantity": 10,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "flour tortillas",
+          "quantity": 6,
+          "unit": "",
+          "aisle": "bakery"
+        },
+        {
+          "item": "red onion",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "long green pepper",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 4,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "Better Than Bouillon Sofrito base",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon Chipotle base",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "chili powder",
+          "quantity": 1.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cumin",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "garlic powder",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "lime",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "orange",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh cilantro",
+          "quantity": 0.25,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "sugar",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Halve, peel, and thinly slice the onion. Quarter the lime, halve the orange, core and slice the pepper into strips, and chop the cilantro.",
+        "Combine about ¼ of the onion, the juice of half the lime, a pinch of sugar, and a pinch of salt in a microwave-safe bowl. Cover and microwave 30 seconds. Mix the chili powder, cumin, and garlic powder together. In a separate bowl, mix the sour cream with a pinch of that spice mix, salt, and pepper, and add water a teaspoon at a time until drizzly.",
+        "Heat oil in a large pan over medium-high. Cook the pepper and remaining onion 5 to 7 minutes until browned and tender. Season and move to a bowl. Wipe the pan.",
+        "Heat more oil, add the pork and the rest of the chili powder, cumin, and garlic powder, and cook 3 to 4 minutes, breaking up the meat, until browned. Stir in the Sofrito and Chipotle bases, the orange juice, and the remaining lime juice. Simmer 2 to 3 minutes until the pork is cooked through. Season.",
+        "Wrap the tortillas in damp paper towels and microwave 30 seconds until warm.",
+        "Fill the tortillas with the pork and veggies, drizzle with the crema, and top with the pickled onion and cilantro. Serve with lime wedges."
+      ],
+      "dietaryNotes": [
+        "Pickled red onion on top"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 1,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Citrus Pork Tacos with Pickled Onion & Southwest Crema",
+        "url": "https://www.hellofresh.com/recipes/citrus-pork-tacos-66f2c3fd1e86f3e65846f953"
+      },
+      "art": "tacos",
+      "prepMinutes": 10,
+      "cookMinutes": 20,
+      "method": "Stovetop",
+      "flavor": "Bright, citrusy, smoky",
+      "bestFor": "Taco night"
+    },
+    {
+      "id": "beef-poblano-tacos",
+      "name": "Beef & Poblano Tacos",
+      "description": "Seasoned ground beef and charred poblano in tortillas with a sweet-tart kiwi salsa and lime crema.",
+      "protein": [
+        "beef"
+      ],
+      "mealType": [
+        "tacos"
+      ],
+      "tags": [
+        "weeknight",
+        "stovetop",
+        "fresh"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "ground beef",
+          "quantity": 10,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "poblano pepper",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "red onion",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "kiwi",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "tomato",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "lime",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 3,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "tomato paste",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon beef base",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "chili powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cumin",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "garlic powder",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "dried oregano",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "flour tortillas",
+          "quantity": 6,
+          "unit": "",
+          "aisle": "bakery"
+        },
+        {
+          "item": "fresh cilantro",
+          "quantity": 0.25,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Finely dice the tomato and kiwi. Halve, peel, and thinly slice the onion, and mince enough to make 1 tbsp. Roughly chop the cilantro, quarter the lime, and core, seed, and finely chop the poblano.",
+        "Combine the tomato, kiwi, minced onion, half the cilantro, and some lime juice in a medium bowl and season. In a small bowl, mix the sour cream with lime juice, adding water a teaspoon at a time until drizzly. Season.",
+        "Make the taco spice by mixing the chili powder, cumin, garlic powder, and oregano. Heat oil in a large pan over medium-high and cook the poblano, sliced onion, and half the spice 3 to 4 minutes until softened and lightly charred.",
+        "Add the beef, a drizzle of oil, and the remaining spice and cook 4 to 5 minutes, breaking it up, until browned and cooked through. Season and drain excess grease if needed.",
+        "Reduce the heat to medium-low. Stir in the beef base, 2 tbsp water, and the tomato paste and cook 1 to 2 minutes until the sauce is thick. Season.",
+        "Wrap the tortillas in damp paper towels and microwave 30 seconds. Fill with the beef, kiwi salsa, and lime crema, and top with the remaining cilantro. Serve with lime wedges."
+      ],
+      "dietaryNotes": [
+        "Salsa has raw red onion"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 1,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Beef & Poblano Tacos with Kiwi Salsa & Lime Crema",
+        "url": "https://www.hellofresh.com/recipes/beef-and-poblano-tacos-6076d6066a86a32b3f5eec4e"
+      },
+      "art": "tacos",
+      "prepMinutes": 10,
+      "cookMinutes": 20,
+      "method": "Stovetop",
+      "flavor": "Savory, sweet-tart, fresh",
+      "bestFor": "Taco night"
+    },
+    {
+      "id": "baja-fish-tacos",
+      "name": "Baja Fish Tacos",
+      "description": "Crispy blackened tilapia in tortillas with crunchy slaw, chipotle mayo, and quick pickled jalapeño and radish.",
+      "protein": [
+        "fish"
+      ],
+      "mealType": [
+        "tacos"
+      ],
+      "tags": [
+        "weeknight",
+        "fried",
+        "fresh"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "medium",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "tilapia",
+          "quantity": 11,
+          "unit": "oz",
+          "aisle": "seafood"
+        },
+        {
+          "item": "shredded red cabbage",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "Sriracha",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "smoked paprika",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        },
+        {
+          "item": "fresh cilantro",
+          "quantity": 0.25,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "lime",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "jalapeño",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "mayonnaise",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "cornstarch",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "all-purpose flour",
+          "quantity": 3,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "baking powder",
+          "quantity": 0.75,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Chef Paul Prudhomme's Blackened Redfish Magic",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "radishes",
+          "quantity": 3,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "flour tortillas",
+          "quantity": 6,
+          "unit": "",
+          "aisle": "bakery"
+        },
+        {
+          "item": "chipotle powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "vegetable oil, for frying",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sugar",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Zest and quarter the lime, thinly slice the jalapeño (remove the ribs and seeds) and radishes, and chop the cilantro. For the chipotle mayo, stir the sour cream, Sriracha, smoked paprika, mayonnaise, a pinch of lime zest, and the chipotle powder together, adding water a teaspoon at a time until drizzly. Season.",
+        "Mix the jalapeño, radishes, some lime juice, 1 tsp sugar, and a pinch of salt in a microwave-safe bowl and microwave 30 seconds, stirring now and then. In a medium bowl, combine the cabbage, half the cilantro, the remaining lime juice, 1 tsp sugar, salt, pepper, and a little zest.",
+        "Make the tempura mix by whisking the cornstarch, flour, and baking powder (about ⅔ cup). Whisk it in a large bowl with half the blackening seasoning, ⅓ cup cold water, and ½ tsp salt until smooth, adding water 1 tbsp at a time if too thick. Pat the tilapia dry, slice into strips about 3 inches by 1 inch, and season with the remaining blackening seasoning, salt, and pepper. Stir the strips into the batter to coat. Line a plate with paper towels.",
+        "Heat a ¼-inch layer of oil in a large pan over medium-high until a drop of batter sizzles. Fry the fish in a single layer, in batches, 1 to 2 minutes per side until golden and cooked through. Drain on the paper towels and season right away with salt and pepper.",
+        "Wrap the tortillas in damp paper towels and microwave 30 seconds until warm.",
+        "Fill the tortillas with drained slaw and fried fish. Top with the chipotle mayo, remaining cilantro, and pickled veggies to taste."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 1,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Baja Fish Tacos with Slaw, Chipotle Mayo & Pickled Veggies",
+        "url": "https://www.hellofresh.com/recipes/baja-fish-tacos-60510ec6dd5751261d4dc5b1"
+      },
+      "art": "tacos",
+      "prepMinutes": 10,
+      "cookMinutes": 20,
+      "method": "Pan-fried",
+      "flavor": "Crispy, smoky, tangy",
+      "bestFor": "Fun dinner"
+    },
+    {
+      "id": "italian-garden-veggie-soup",
+      "name": "Italian Garden Veggie Soup",
+      "description": "A tomato-y vegetable soup with kale and pearled couscous, served with buttery garlic bread.",
+      "protein": [
+        "vegetarian"
+      ],
+      "mealType": [
+        "soup"
+      ],
+      "tags": [
+        "weeknight",
+        "cozy",
+        "comfort",
+        "vegetarian",
+        "stovetop"
+      ],
+      "timeMinutes": 40,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "yellow onion",
+          "quantity": 6,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "carrots",
+          "quantity": 6,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "garlic clove",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "kale",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "Italian seasoning",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "crushed tomatoes",
+          "quantity": 1,
+          "unit": "can (14 oz)",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon vegetable base",
+          "quantity": 3,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Israeli (pearled) couscous",
+          "quantity": 2.5,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "garlic powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "demi-baguette",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "bakery"
+        },
+        {
+          "item": "grated Parmesan",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "chili flakes",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Dice the onion. Cut the carrots into ¼-inch rounds, mince the garlic, and remove the large stems from the kale.",
+        "Heat the olive oil in a large pot over medium-high. Cook the onion and carrots with salt and pepper 4 to 6 minutes, stirring now and then, until lightly browned and slightly softened.",
+        "Stir in the Italian seasoning and garlic and cook 30 seconds. Add the crushed tomatoes, vegetable base, 3 cups water, and a pinch of salt. Bring to a boil, then simmer 5 to 7 minutes until the carrots soften.",
+        "Stir in the couscous and kale and cook 8 to 10 minutes until the couscous is tender and the kale wilts. Season.",
+        "Halve the baguette lengthwise. Soften the butter (10 to 15 seconds in the microwave), stir in half the garlic powder, and season. Toast the baguette halves, spread with the garlic butter, and cut each in half diagonally.",
+        "Divide the soup between bowls, sprinkle with Parmesan and chili flakes, and serve with the garlic bread."
+      ],
+      "dietaryNotes": [
+        "Garlic is optional"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 3,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Italian Garden Veggie Soup with Kale, Pearled Couscous & Garlic Bread",
+        "url": "https://www.hellofresh.com/recipes/italian-garden-veggie-soup-5fb2e2d5bd4bc2681906d617"
+      },
+      "art": "soup",
+      "prepMinutes": 10,
+      "cookMinutes": 30,
+      "method": "Simmered",
+      "flavor": "Cozy, tomatoey, herby",
+      "bestFor": "Cold-night soup"
+    },
+    {
+      "id": "homemade-chicken-noodle-soup",
+      "name": "Homemade Chicken Noodle Soup",
+      "description": "Classic chicken noodle soup with chicken thighs, vegetables, and fresh egg noodles you roll and cut yourself.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "soup"
+      ],
+      "tags": [
+        "comfort",
+        "cozy",
+        "homemade",
+        "stovetop"
+      ],
+      "timeMinutes": 50,
+      "difficulty": "hard",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "chicken thighs, diced",
+          "quantity": 10,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "egg",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "carrot",
+          "quantity": 6,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "onion",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "celery",
+          "quantity": 2.5,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "celery salt",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon chicken base",
+          "quantity": 3,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "garlic powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "fresh dill",
+          "quantity": 0.25,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "all-purpose flour",
+          "quantity": 1.5,
+          "unit": "cups",
+          "aisle": "pantry"
+        },
+        {
+          "item": "flour, for dusting",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 1.5,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "salt",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 4,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "black pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "In a large bowl, whisk the egg, 1 tbsp olive oil, 1 tbsp water, and 2 tsp salt. Add 1½ cups flour and stir vigorously 1 to 2 minutes until a slightly sticky dough forms.",
+        "Sprinkle a work surface with 1 to 2 tbsp flour. Knead the dough by pressing firmly and folding for 2 to 3 minutes until firm. Cover with a towel and rest at least 10 minutes (up to 30).",
+        "While the dough rests, dice the onion, celery, and carrots into ½-inch pieces and chop the dill.",
+        "Dust the surface with 2 to 3 tbsp flour and roll the dough to ⅛ inch thick, about a 12-inch circle. Cut into noodle strips with a sharp knife or pizza cutter.",
+        "Melt the butter with a drizzle of olive oil in a large pot over medium-high. Cook the onion, celery, and carrots with salt and pepper 3 to 4 minutes until softening. Stir in the chicken, garlic powder, and celery salt and cook 2 to 3 minutes until browning.",
+        "Add 4 cups water and the chicken base. Bring to a boil, cover, reduce to medium, and cook 5 minutes until the vegetables are tender. Add half the noodles one handful at a time, stirring between additions, and cook 3 to 4 minutes until tender.",
+        "Off the heat, stir in half the dill and season. Divide into bowls and top with the remaining dill and a spoonful of sour cream."
+      ],
+      "dietaryNotes": [
+        "Hard recipe; plan a little extra time"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 3,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Homemade Chicken Noodle Soup with Make-Your-Own Fresh Egg Noodles",
+        "url": "https://www.hellofresh.com/recipes/homemade-chicken-noodle-soup-68d655339ed4d6794189f071"
+      },
+      "art": "soup",
+      "prepMinutes": 15,
+      "cookMinutes": 35,
+      "method": "Simmered",
+      "flavor": "Comforting, savory",
+      "bestFor": "Sick-day soup"
+    },
+    {
+      "id": "vegan-firecracker-mushroom-rice-bowls",
+      "name": "Vegan Firecracker Mushroom Rice Bowls",
+      "description": "Jasmine rice topped with roasted carrots and green beans, glazed mushrooms, and a creamy sriracha firecracker sauce.",
+      "protein": [
+        "vegetarian"
+      ],
+      "mealType": [
+        "bowls"
+      ],
+      "tags": [
+        "weeknight",
+        "vegan",
+        "vegetarian",
+        "roasted"
+      ],
+      "timeMinutes": 35,
+      "difficulty": "medium",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "carrots",
+          "quantity": 12,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "jasmine rice",
+          "quantity": 0.75,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "green beans",
+          "quantity": 6,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "button mushrooms",
+          "quantity": 8,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "ginger",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "produce"
+        },
+        {
+          "item": "scallions",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "vegan mayo",
+          "quantity": 4,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "Sriracha",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "soy sauce",
+          "quantity": 3,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "brown sugar",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "rice wine vinegar",
+          "quantity": 5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "garlic powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sesame seeds",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sugar",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Make the sweet soy glaze: simmer the soy sauce, brown sugar, and 1 tbsp water in a small pot 2 to 3 minutes until syrupy (about 4 tbsp). Set aside.",
+        "Preheat the oven to 425°F. Peel the carrots and cut diagonally into ½-inch pieces. Toss with oil, salt, and pepper on one side of a baking sheet and roast on the top rack 10 minutes.",
+        "Meanwhile, combine the rice, 1¼ cups water, and a pinch of salt in a small pot. Bring to a boil, cover, reduce to low, and cook 15 to 18 minutes until tender. Keep covered off the heat.",
+        "Trim the green beans, slice the mushrooms, mince the ginger (1 tsp), and slice the scallions, keeping whites and greens separate.",
+        "After the carrots have roasted 10 minutes, toss the green beans with oil, salt, and pepper on the empty side of the pan. Return to the top rack and roast 12 to 15 minutes until browned and tender.",
+        "For the sauce, stir the mayo, Sriracha, 1 tbsp of the glaze, 1 tsp vinegar, and the sugar together, adding water a teaspoon at a time until drizzly. Season.",
+        "Heat oil in a large pan over medium-high and cook the mushrooms 5 to 7 minutes until browned. Reduce to medium and add the ginger, scallion whites, garlic powder, and a little oil and cook 1 minute. Off the heat, stir in the remaining glaze and cover.",
+        "Fluff the rice and season. Divide between bowls, top with the carrots, green beans, and mushrooms in separate sections, then drizzle with the firecracker sauce and finish with the scallion greens and sesame seeds."
+      ],
+      "dietaryNotes": [
+        "Vegan"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 2,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Vegan Firecracker Mushroom Rice Bowls with Roasted Veggies, Scallions & Sesame Seeds",
+        "url": "https://www.hellofresh.com/recipes/vegan-firecracker-mushroom-rice-bowls-with-roasted-veggies-scallions-and-sesame-seeds-671f969e4251e0dbe4bdee04"
+      },
+      "art": "sesame-bowl",
+      "prepMinutes": 10,
+      "cookMinutes": 25,
+      "method": "Roasted + stovetop",
+      "flavor": "Sweet, spicy, savory",
+      "bestFor": "Meatless night"
+    },
+    {
+      "id": "bacon-mushroom-risotto",
+      "name": "Bacon & Mushroom Risotto",
+      "description": "Creamy Arborio risotto with roasted mushrooms, crispy bacon, thyme, and Parmesan.",
+      "protein": [
+        "pork"
+      ],
+      "mealType": [
+        "skillet"
+      ],
+      "tags": [
+        "comfort",
+        "risotto",
+        "creamy"
+      ],
+      "timeMinutes": 40,
+      "difficulty": "medium",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "button mushrooms",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "bacon",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "scallions",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "garlic cloves",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "dried thyme",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Arborio rice",
+          "quantity": 0.75,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sweet onion, minced",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "produce"
+        },
+        {
+          "item": "Better Than Bouillon chicken base",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 1.5,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "grated Parmesan",
+          "quantity": 5,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "butter",
+          "quantity": 3,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Preheat the oven to 425°F with a rack on top. Stir the chicken base into 5 cups water in a medium pot, bring to a boil, then keep at a low simmer. Slice the mushrooms and scallions (keep whites and greens separate) and mince the garlic.",
+        "Lay the bacon on a baking sheet and toss the mushrooms with oil, half the thyme, salt, and pepper on the empty side. Roast 15 to 20 minutes until the bacon is crisp and the mushrooms tender. Drain the bacon on paper towels and chop when cool.",
+        "Heat the olive oil in a large pan over medium. Cook the scallion whites 1 minute. Add the garlic, rice, minced sweet onion, and 1 tbsp butter and cook 1 to 2 minutes, stirring, until the garlic is fragrant and the rice edges turn translucent. Season.",
+        "Add ½ cup of the simmering broth and stir until mostly absorbed. Repeat with the remaining broth in ½-cup additions, stirring, for 25 to 30 minutes until the rice is al dente and creamy.",
+        "Stir in the sour cream, 2 tbsp butter, and 2 tbsp of the Parmesan until creamy. Mix in the mushrooms, half the bacon, and half the remaining Parmesan. Season to taste.",
+        "Divide into bowls and top with the scallion greens, remaining bacon, and Parmesan."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 2,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Bacon & Mushroom Risotto with Thyme, Parmesan & Scallions",
+        "url": "https://www.hellofresh.com/recipes/bacon-mushroom-risotto-68aec759a567f2a94ecb6c88"
+      },
+      "art": "taco-bowl",
+      "prepMinutes": 10,
+      "cookMinutes": 30,
+      "method": "Roasted + risotto",
+      "flavor": "Creamy, savory, smoky",
+      "bestFor": "Comfort night"
+    },
+    {
+      "id": "stuffed-squash-chicken-sausage",
+      "name": "Stuffed Squash with Chicken Sausage",
+      "description": "Roasted delicata squash stuffed with chicken sausage, kale, apple, and raisin couscous, with a lemony cream sauce.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "sheet-pan"
+      ],
+      "tags": [
+        "fall",
+        "cozy",
+        "roasted",
+        "stuffed"
+      ],
+      "timeMinutes": 40,
+      "difficulty": "medium",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "delicata squash",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "Italian chicken sausage, casings removed",
+          "quantity": 9,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "kale",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "apple",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "pearl couscous",
+          "quantity": 0.75,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "golden raisins",
+          "quantity": 1,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "shallot",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh sage",
+          "quantity": 0.25,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "lemon",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "cream cheese",
+          "quantity": 4,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "Better Than Bouillon vegetable base",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 3,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 4,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Preheat the oven to 450°F with a rack on top. Halve the squash lengthwise and scoop out the seeds. Coat with oil, season, and set cut-side down on a baking sheet. Roast 25 to 30 minutes until browned and tender. Meanwhile, season the sausage and cook it in oiled large pan over medium-high 4 to 6 minutes until browned.",
+        "Zest and quarter the lemon, thinly slice the shallot, remove the kale stems and chop the leaves, dice the apple into ¼-inch pieces, and chop 2 tsp sage. Combine the raisins and lemon juice in a microwave-safe bowl, cover, and microwave 20 to 30 seconds.",
+        "Heat oil in a medium pot over medium-high. Cook the shallot 1 to 3 minutes until softened, then add the kale with a splash of water and cook 1 to 3 minutes until wilted. Season. Add the couscous, 1 cup water, and half the vegetable base, bring to a boil, cover, reduce to low, and cook 6 to 8 minutes until tender. Drain any excess liquid, then stir in the apple, raisins, lemon juice, salt, and pepper.",
+        "Melt 3 tbsp butter in a small pan over medium-high. Add the sage and cook 1 to 2 minutes until foamy with amber bits. Stir the sage butter, half the lemon zest, and salt into the couscous, then stir in the sausage.",
+        "Heat the pan over medium. Add ¼ cup water, the cream cheese, the raisin soaking liquid, the remaining zest, and the remaining vegetable base and cook 2 to 3 minutes, stirring, until thickened. Stir in 1 tbsp butter and season.",
+        "Flip the squash and stuff with the couscous filling. Divide the remaining filling between plates, set the squash on top, drizzle with the lemon cream, and serve with lemon wedges."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 3,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Stuffed Squash with Chicken Sausage, Kale, Apple & Raisin Couscous",
+        "url": "https://www.hellofresh.com/recipes/stuffed-squash-with-chicken-sausage-630650126b5885c65e0b70bb"
+      },
+      "art": "sheet-pan",
+      "prepMinutes": 10,
+      "cookMinutes": 30,
+      "method": "Roasted",
+      "flavor": "Sweet, savory, cozy",
+      "bestFor": "Fall dinner"
+    },
+    {
+      "id": "mediterranean-chicken-grain-bowls",
+      "name": "Mediterranean Chicken & Grain Bowls",
+      "description": "Paprika-spiced chicken thighs over warm grains with cucumber salad, feta, pita, and a red pepper crema.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "bowls"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "mediterranean"
+      ],
+      "timeMinutes": 15,
+      "difficulty": "medium",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "chicken thighs, diced",
+          "quantity": 10,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "microwavable grain blend",
+          "quantity": 1,
+          "unit": "pouch",
+          "aisle": "pantry"
+        },
+        {
+          "item": "mini cucumber",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "feta cheese",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "pitas",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "bakery"
+        },
+        {
+          "item": "paprika",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "garlic powder",
+          "quantity": 0.25,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cumin",
+          "quantity": 0.25,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "dried oregano",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon chicken base",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "Sriracha",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "smoked paprika",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        },
+        {
+          "item": "sherry vinegar",
+          "quantity": 2.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Trim and finely dice the cucumber. For the red pepper crema, stir the sour cream, Sriracha, and smoked paprika together. Mix the paprika, garlic powder, and cumin for the spice blend.",
+        "Toss the cucumber with half the sherry vinegar, a drizzle of olive oil, salt, and pepper in a small bowl.",
+        "Heat oil in a large pan over medium-high. Add the chicken with half the oregano, half the spice blend, salt, and pepper and cook 4 to 6 minutes, stirring now and then, until browned and cooked through. Meanwhile, massage the grain pouch, open it partway, and microwave 60 to 90 seconds. Add the grains, chicken base, and 1 tbsp water to the pan and cook 1 minute more, stirring.",
+        "Wrap the pitas in a damp paper towel and microwave 30 to 60 seconds. Divide the chicken and grains between bowls and top with the drained cucumber salad, feta, and a drizzle of crema. Serve the pitas alongside."
+      ],
+      "dietaryNotes": [],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": 2,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "Mediterranean Chicken & Grain Bowls with Dark Meat Chicken, Cucumber Salad & Feta",
+        "url": "https://www.hellofresh.com/recipes/mediterranean-chicken-and-grain-bowls-6819864b433618abc35b15e2"
+      },
+      "art": "taco-bowl",
+      "prepMinutes": 5,
+      "cookMinutes": 10,
+      "method": "Skillet",
+      "flavor": "Savory, herby, tangy",
+      "bestFor": "Quick weeknight"
+    }
+  ]
+}
