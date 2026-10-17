@@ -515,13 +515,13 @@
     const pips = Array.from({ length: 7 }, (_, i) => `<i class="${planned(addDays(wk, i)) ? 'on' : ''}"></i>`).join('');
     $('#view-home').innerHTML = `
       <header class="home-head">
-        <div class="home-head-text">
-          <h1 class="wordmark">Dinner Darling</h1>
-          <p class="tagline">Dinner, decided.</p>
-        </div>
-        <div class="home-tilly" aria-hidden="true">${Art.mascot('home', 'tilly')}</div>
+        <h1 class="wordmark">Dinner Darling</h1>
+        <p class="tagline">Dinner, decided.</p>
       </header>
-      <p class="home-say" role="status">${esc(say)}</p>
+      <div class="home-hero">
+        ${Art.mascot('home', 'tilly')}
+        <p class="home-say" role="status">${esc(say)}</p>
+      </div>
       <a class="week-status" href="#/week">
         <span class="ws-text"><b>This Week</b><span>${n} ${n === 1 ? 'dinner' : 'dinners'} planned${waiting ? ` · ${waiting} waiting` : ''}</span></span>
         <span class="pips" aria-hidden="true">${pips}</span>
