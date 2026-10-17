@@ -26,7 +26,7 @@
     "shoppingEmpty": "assets/decor/herbs.webp",
     "noResults": "assets/decor/lemon-branch.webp",
     "listEnd": "assets/decor/olive.webp",
-    "weekRosemary": "assets/decor/rosemary-girl.webp",
+    "weekRosemary": "assets/decor/rosemary-peek.webp",
     "favoritesFooter": "assets/decor/garlic.webp"
   },
   "recipes": {
@@ -53,7 +53,13 @@
     "vegan-firecracker-mushroom-rice-bowls": "assets/meal-type/bowls.webp",
     "bacon-mushroom-risotto": "assets/meal-type/bowls.webp",
     "stuffed-squash-chicken-sausage": "assets/meal-type/sheet-pan.webp",
-    "mediterranean-chicken-grain-bowls": "assets/meal-type/bowls.webp"
+    "mediterranean-chicken-grain-bowls": "assets/meal-type/bowls.webp",
+    "meatloaf-meatballs": "assets/protein/beef.webp",
+    "maeves-cava-bowl": "assets/meal-type/bowls.webp",
+    "creamy-chicken-potato-soup": "assets/meal-type/soup.webp",
+    "mediterranean-salmon-grain-bowl": "assets/meal-type/bowls.webp",
+    "coconut-curry-chicken-soup": "assets/meal-type/soup.webp",
+    "one-pot-chicken-sausage-kale-soup": "assets/meal-type/soup.webp"
   },
   "mascot": {
     "home": "assets/mascot/tilly-cooking-home.webp",

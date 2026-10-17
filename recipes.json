@@ -3775,6 +3775,862 @@
       "method": "Skillet",
       "flavor": "Savory, herby, tangy",
       "bestFor": "Quick weeknight"
+    },
+    {
+      "id": "meatloaf-meatballs",
+      "name": "Meatloaf Meatballs",
+      "description": "Tender baked beef meatballs coated in a sweet and tangy meatloaf glaze.",
+      "protein": [
+        "beef"
+      ],
+      "mealType": [],
+      "tags": [
+        "baked",
+        "weeknight",
+        "meatballs"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 25,
+      "ingredients": [
+        {
+          "item": "ground beef (90/10)",
+          "quantity": 2,
+          "unit": "lb",
+          "aisle": "meat"
+        },
+        {
+          "item": "yellow onion, minced",
+          "quantity": 0.25,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "garlic cloves, minced",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "Worcestershire sauce",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "large eggs",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "breadcrumbs",
+          "quantity": 0.75,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "kosher salt",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "black pepper",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "ketchup",
+          "quantity": 0.33,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "brown sugar",
+          "quantity": 3,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "yellow mustard",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Worcestershire sauce",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Heat the oven to 375°F.",
+        "Gently mix the beef, onion, garlic, Worcestershire, eggs, breadcrumbs, salt, and pepper until just combined.",
+        "Roll into 25 meatballs and set them in a 9×13-inch baking dish.",
+        "Bake 18 to 20 minutes. While they bake, stir the ketchup, brown sugar, mustard, and Worcestershire together for the glaze.",
+        "Switch the oven to broil. Spoon the glaze over the meatballs and broil about 1 minute, until the glaze caramelizes. No broiler? Bake at 450°F for 5 minutes instead."
+      ],
+      "dietaryNotes": [
+        "Makes about 25 meatballs"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "Ruby loved these!",
+      "leftoverRating": null,
+      "source": {
+        "type": "published",
+        "name": "Dinner, then Dessert",
+        "title": "Meatloaf Meatballs",
+        "url": "https://dinnerthendessert.com/meatloaf-meatballs/"
+      },
+      "art": "steak",
+      "prepMinutes": 10,
+      "cookMinutes": 20,
+      "method": "Baked",
+      "flavor": "Sweet, tangy, savory",
+      "bestFor": "Weeknight dinner"
+    },
+    {
+      "id": "maeves-cava-bowl",
+      "name": "Maeve's CAVA Bowl",
+      "description": "Garlic-sautéed steak over basmati rice and greens with fresh cucumber, tomato, onion, feta, and Greek vinaigrette.",
+      "protein": [
+        "steak"
+      ],
+      "mealType": [
+        "bowls"
+      ],
+      "tags": [
+        "house-recipe",
+        "stovetop",
+        "assembly",
+        "mediterranean"
+      ],
+      "timeMinutes": 30,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": "Flexible",
+      "ingredients": [
+        {
+          "item": "basmati rice",
+          "quantity": "",
+          "unit": "",
+          "aisle": "pantry"
+        },
+        {
+          "item": "mixed greens",
+          "quantity": "",
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "kale, finely chopped",
+          "quantity": "",
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "lean steak, cut into bite-sized cubes",
+          "quantity": "",
+          "unit": "",
+          "aisle": "meat"
+        },
+        {
+          "item": "garlic",
+          "quantity": "",
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "salt",
+          "quantity": "",
+          "unit": "",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cooking oil",
+          "quantity": "",
+          "unit": "",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cucumber",
+          "quantity": "",
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "tomato",
+          "quantity": "",
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "onion",
+          "quantity": "",
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "feta cheese, crumbled",
+          "quantity": "",
+          "unit": "",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "Greek vinaigrette",
+          "quantity": "",
+          "unit": "",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Cook the basmati rice according to the package directions.",
+        "Cut the steak into bite-sized cubes and season lightly with garlic and salt.",
+        "Sauté the steak in a little oil until browned and cooked to your liking.",
+        "Finely chop the kale and toss it with the mixed greens. Chop the cucumber, tomato, and onion.",
+        "Build each bowl with rice, greens, steak, the fresh vegetables, and feta. Finish with Greek vinaigrette."
+      ],
+      "dietaryNotes": [
+        "Quantities are as needed — build the bowl to taste",
+        "Cucumber, tomato, and onion are fresh, not pickled",
+        "Maeve's standard bowl has no hummus, tahini, olives, or tzatziki"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "Ruby's Variation — add tzatziki, hummus, and Kalamata olives. These are optional extras on top of the standard bowl, not replacements, and they are not on the shopping list.",
+      "leftoverRating": null,
+      "source": {
+        "type": "original-or-inspired",
+        "name": "Dinner Darling House Recipe"
+      },
+      "art": "lemon-herb-bowl",
+      "prepMinutes": null,
+      "cookMinutes": null,
+      "method": "Stovetop and assembly",
+      "flavor": "Garlicky, fresh, tangy",
+      "bestFor": "Build-your-own bowls"
+    },
+    {
+      "id": "creamy-chicken-potato-soup",
+      "name": "Creamy Chicken & Potato Soup",
+      "description": "Tender shredded chicken, Yukon Gold potatoes, carrots, and celery in a creamy, herb-seasoned broth.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "soup"
+      ],
+      "tags": [
+        "one-pot",
+        "cozy",
+        "comfort",
+        "creamy"
+      ],
+      "timeMinutes": 53,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": "6–8",
+      "ingredients": [
+        {
+          "item": "yellow onion, diced",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "carrots",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "celery stalks",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "garlic cloves",
+          "quantity": 3,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "boneless skinless chicken breasts or thighs",
+          "quantity": 1.5,
+          "unit": "lb",
+          "aisle": "meat"
+        },
+        {
+          "item": "kosher salt",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "black pepper",
+          "quantity": 0.25,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "dried thyme",
+          "quantity": 0.75,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "bay leaf",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Yukon Gold potatoes",
+          "quantity": 1.5,
+          "unit": "lb",
+          "aisle": "produce"
+        },
+        {
+          "item": "all-purpose flour",
+          "quantity": 0.33,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "low-sodium chicken broth",
+          "quantity": 4,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "whole or 2% milk",
+          "quantity": 2,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        }
+      ],
+      "instructions": [
+        "Dice the onion, slice the carrots into ½-inch pieces and the celery into ¼-inch pieces, and chop the garlic. Season the chicken with half the salt and all the pepper.",
+        "Warm the olive oil in a Dutch oven over medium. Cook the onion, carrots, celery, garlic, thyme, bay leaf, and the rest of the salt about 5 minutes, until the onion is soft. Meanwhile, cut the potatoes into 1-inch cubes, skins on.",
+        "Stir in the potatoes, then the flour, and cook 1 minute, stirring constantly.",
+        "Slowly stir in the broth and milk. Lay the chicken in a single layer in the pot and bring to a lively simmer over medium-high.",
+        "Turn down to a gentle simmer and cook until the potatoes are tender and the chicken reaches 165°F, about 10 minutes for thighs or 12 to 18 for breasts.",
+        "Move the chicken to a board and shred it. Remove the bay leaf, return the chicken to the pot, and season with more salt and pepper to taste."
+      ],
+      "dietaryNotes": [
+        "Made with milk — no cream",
+        "Cooked rotisserie chicken can stand in for the raw chicken in the same amount",
+        "Total time is about 40 to 53 minutes depending on the cut of chicken"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": null,
+      "source": {
+        "type": "published",
+        "name": "The Kitchn",
+        "author": "Kelli Foster",
+        "title": "Creamy Chicken Potato Soup",
+        "url": "https://www.thekitchn.com/chicken-potato-soup-recipe-23411729"
+      },
+      "art": "soup",
+      "prepMinutes": 15,
+      "cookMinutes": 38,
+      "method": "One pot",
+      "flavor": "Creamy, herby, comforting",
+      "bestFor": "Cold nights"
+    },
+    {
+      "id": "mediterranean-salmon-grain-bowl",
+      "name": "Mediterranean Salmon Grain Bowl",
+      "description": "Smoky paprika-roasted salmon over pearl couscous, arugula, and fresh cucumber-tomato salad, finished with a creamy lemon-dill sauce.",
+      "protein": [
+        "salmon"
+      ],
+      "mealType": [
+        "bowls"
+      ],
+      "tags": [
+        "mediterranean",
+        "oven",
+        "stovetop"
+      ],
+      "timeMinutes": 45,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 4,
+      "ingredients": [
+        {
+          "item": "Israeli (pearl) couscous",
+          "quantity": 1.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "water",
+          "quantity": 3,
+          "unit": "cup",
+          "aisle": ""
+        },
+        {
+          "item": "large salmon fillet, cut into portions",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "seafood"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "smoked paprika",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "black pepper",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "dried oregano",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "lemon",
+          "quantity": 0.5,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "lemon (juiced, for the sauce)",
+          "quantity": 0.5,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "plain Greek yogurt",
+          "quantity": 0.75,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "sour cream",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "mayonnaise",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "dried dill",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "black pepper",
+          "quantity": 0.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "grape tomatoes, halved",
+          "quantity": 1,
+          "unit": "pint",
+          "aisle": "produce"
+        },
+        {
+          "item": "English cucumber",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "red onion, chopped",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "produce"
+        },
+        {
+          "item": "arugula",
+          "quantity": "",
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "olive oil",
+          "quantity": "",
+          "unit": "",
+          "aisle": "pantry"
+        },
+        {
+          "item": "red wine vinegar",
+          "quantity": "",
+          "unit": "",
+          "aisle": "pantry"
+        },
+        {
+          "item": "lemon wedges",
+          "quantity": "",
+          "unit": "",
+          "aisle": "produce"
+        }
+      ],
+      "instructions": [
+        "Bring 3 cups of water to a boil. Add the couscous, 1 tablespoon olive oil, and ½ teaspoon salt, then simmer about 20 minutes until the water is absorbed. Take off the heat, cover, and let it sit.",
+        "Heat the oven to 350°F. Pat the salmon dry, cut it into portions, and drizzle with 2 tablespoons olive oil. Mix the smoked paprika, 1 teaspoon salt, ½ teaspoon pepper, and oregano, and rub it over the fish.",
+        "Bake on a rimmed sheet 13 to 16 minutes, until the salmon flakes easily, then squeeze the ½ lemon over it.",
+        "While the salmon bakes, whisk the lemon juice, Greek yogurt, sour cream, mayonnaise, dill, ½ teaspoon salt, and ½ teaspoon pepper into a sauce.",
+        "Halve the tomatoes, slice the cucumber, and chop the red onion.",
+        "Fill each bowl with couscous, arugula, and the tomato-cucumber mix. Add the salmon, spoon over the sauce, and finish with olive oil and red wine vinegar. Serve with lemon wedges."
+      ],
+      "dietaryNotes": [
+        "Uses pearl couscous — not rice"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "The source lists the lemon juice in the sauce twice (½ lemon each time). This uses ½ lemon — stir in the other half to taste.",
+      "leftoverRating": null,
+      "source": {
+        "type": "published",
+        "name": "For the Love of Gourmet",
+        "title": "Mediterranean Salmon Bowls",
+        "url": "https://fortheloveofgourmet.com/mediterranean-salmon-bowls/"
+      },
+      "art": "lemon-herb-bowl",
+      "prepMinutes": 20,
+      "cookMinutes": 25,
+      "method": "Oven and stovetop",
+      "flavor": "Smoky, lemony, creamy",
+      "bestFor": "Weeknight dinner"
+    },
+    {
+      "id": "coconut-curry-chicken-soup",
+      "name": "Coconut Curry Chicken Soup",
+      "description": "A creamy Thai-inspired coconut curry soup with tender chicken, rice noodles, ginger, lime, and fresh herbs.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "soup"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "thai-inspired",
+        "stovetop"
+      ],
+      "timeMinutes": 20,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 6,
+      "ingredients": [
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "onion, finely chopped",
+          "quantity": 0.5,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh ginger, grated",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "produce"
+        },
+        {
+          "item": "garlic cloves, minced",
+          "quantity": 3,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "Thai red curry paste",
+          "quantity": 4,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "chicken or vegetable broth",
+          "quantity": 4,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "water",
+          "quantity": 2,
+          "unit": "cup",
+          "aisle": ""
+        },
+        {
+          "item": "lime",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "dry rice noodles",
+          "quantity": 3.5,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "full-fat coconut milk",
+          "quantity": 1,
+          "unit": "can (13.5 oz)",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cooked shredded chicken",
+          "quantity": 2,
+          "unit": "cup",
+          "aisle": "meat"
+        },
+        {
+          "item": "fresh basil",
+          "quantity": 1,
+          "unit": "handful",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh cilantro",
+          "quantity": 1,
+          "unit": "handful",
+          "aisle": "produce"
+        },
+        {
+          "item": "scallions",
+          "quantity": "",
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        },
+        {
+          "item": "lime wedges (optional)",
+          "quantity": "",
+          "unit": "",
+          "aisle": "produce"
+        }
+      ],
+      "instructions": [
+        "Cook the onion in the olive oil in a large pot over medium-high about 5 minutes, stirring now and then.",
+        "Stir in the ginger, garlic, and curry paste (a heaping 4 tablespoons) and cook about 30 seconds.",
+        "Add the broth, water, lime juice, and rice noodles. Turn the heat to high and bring to a gentle boil.",
+        "Stir in the coconut milk and cooked chicken. Reduce to medium-low and simmer 10 minutes.",
+        "Stir in the torn basil, cilantro, and scallions. Season with salt and pepper and serve with lime wedges if you like."
+      ],
+      "dietaryNotes": [
+        "Uses cooked chicken, such as rotisserie — not raw",
+        "Rice noodles soak up broth as the soup sits; add more broth when reheating",
+        "Leftovers keep 3 to 4 days in the fridge"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": null,
+      "source": {
+        "type": "published",
+        "name": "Salt & Lavender",
+        "title": "Easy Thai Chicken Curry Soup",
+        "url": "https://www.saltandlavender.com/20-minute-thai-chicken-curry-soup/"
+      },
+      "art": "soup",
+      "prepMinutes": 5,
+      "cookMinutes": 15,
+      "method": "Stovetop",
+      "flavor": "Creamy, spicy, bright",
+      "bestFor": "Quick weeknight dinner"
+    },
+    {
+      "id": "one-pot-chicken-sausage-kale-soup",
+      "name": "One-Pot Chicken Sausage & Kale Soup",
+      "description": "Savory Italian chicken sausage, tender kale, carrots, and pearl couscous simmered in a seasoned broth, served with buttery garlic ciabatta toasts.",
+      "protein": [
+        "chicken"
+      ],
+      "mealType": [
+        "soup"
+      ],
+      "tags": [
+        "one-pot",
+        "cozy",
+        "weeknight"
+      ],
+      "timeMinutes": 35,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "Italian chicken sausage, casings removed",
+          "quantity": 9,
+          "unit": "oz",
+          "aisle": "meat"
+        },
+        {
+          "item": "kale",
+          "quantity": 4,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "carrot, diced",
+          "quantity": 3,
+          "unit": "oz",
+          "aisle": "produce"
+        },
+        {
+          "item": "yellow onion",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "garlic cloves",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "Israeli (pearl) couscous",
+          "quantity": 1.25,
+          "unit": "oz",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Italian seasoning",
+          "quantity": 0.5,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "Better Than Bouillon chicken base",
+          "quantity": 3.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "water",
+          "quantity": 3.5,
+          "unit": "cup",
+          "aisle": ""
+        },
+        {
+          "item": "ciabatta bread",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "bakery"
+        },
+        {
+          "item": "grated Parmesan",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "garlic powder",
+          "quantity": 1,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "butter",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Soften the butter. Dice the carrot, chop the onion, remove any thick kale stems, and thinly slice the garlic.",
+        "Brown the sausage in a drizzle of olive oil in a large pot over medium-high, breaking it up, 4 to 6 minutes.",
+        "Add another drizzle of oil with the carrot, onion, kale, and a pinch of salt. Cook 5 to 7 minutes, until the vegetables soften and the sausage is cooked through.",
+        "Add the garlic and Italian seasoning and cook 1 minute. Stir the bouillon base into 3½ cups warm water and pour it in, scraping up the browned bits. Add the couscous, cover, and bring to a boil.",
+        "Reduce to low and simmer 7 to 9 minutes, until the couscous is al dente.",
+        "Meanwhile, toast the halved ciabatta, spread with the soft butter, dust with garlic powder, season with salt and pepper, and cut into triangles.",
+        "Stir half the Parmesan into the soup and season well with salt and pepper. Ladle into bowls, top with the rest of the Parmesan, and serve with the toasts."
+      ],
+      "dietaryNotes": [
+        "Better Than Bouillon is salty, so season with salt only at the end"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "",
+      "leftoverRating": null,
+      "source": {
+        "type": "hellofresh",
+        "name": "HelloFresh",
+        "title": "One-Pot Chicken Sausage & Kale Soup with Couscous & Garlic Ciabatta Toasts",
+        "url": "https://www.hellofresh.com/recipes/one-pot-chicken-sausage-kale-soup-61e6fd1fd43a8c7c05493893"
+      },
+      "art": "soup",
+      "prepMinutes": null,
+      "cookMinutes": null,
+      "method": "One pot, plus toasted bread",
+      "flavor": "Savory, herby, cozy",
+      "bestFor": "Cold nights"
     }
   ]
 }

@@ -1,11 +1,14 @@
 (() => {
   'use strict';
 
-  const MAX_WEEK = 3;
   const KEY_FAV = 'dd.favorites.v1';
-  const KEY_WEEK = 'dd.week.v1'; // legacy: single current week { key, ids }
-  const KEY_SHOP = 'dd.shop.v1'; // { "YYYY-MM-DD": [checked item keys] } — current week only
-  const KEY_WEEKS = 'dd.weeks.v2'; // { "YYYY-MM-DD" (Monday): [recipeId, …] } — every week is kept
+  const KEY_WEEK = 'dd.week.v1'; // legacy (read once for migration): single week { key, ids }
+  const KEY_PLAN = 'dd.plan.v1'; // { "YYYY-MM-DD": recipeId } — one dinner per local date, never auto-deleted
+  const KEY_QUEUE = 'dd.queue.v1'; // [recipeId, …] — Selected Dinners waiting to be given a date
+  const KEY_MIG = 'dd.plan.migrated.v1';
+  const KEY_VIEW = 'dd.calview.v1'; // last calendar view: week | 2weeks | month
+  const KEY_SHOP = 'dd.shop.v1'; // { "YYYY-MM-DD" (Monday): [checked item keys] }
+  const KEY_WEEKS = 'dd.weeks.v2'; // legacy (read once for migration): { Monday: [recipeId, …] } — never modified
   const Art = window.DDArt;
 
   /* ---------- helpers ---------- */
@@ -21,60 +24,101 @@
   function read(key, fallback) { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch { return fallback; } }
   function write(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* storage unavailable */ } }
 
+  const pad2 = (n) => String(n).padStart(2, '0');
+  const dkey = (d) => `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`; // local date, YYYY-MM-DD
+  const pdate = (k) => { const [y, m, d] = k.split('-').map(Number); return new Date(y, m - 1, d, 12); };
+  const addDays = (k, n) => { const d = pdate(k); d.setDate(d.getDate() + n); return dkey(d); };
+  const todayKey = () => dkey(new Date());
   function weekKey(d = new Date()) {
-    const x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    const x = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 12);
     x.setDate(x.getDate() - ((x.getDay() + 6) % 7)); // back to Monday
-    return `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, '0')}-${String(x.getDate()).padStart(2, '0')}`;
+    return dkey(x);
   }
-  function weekLabel(key) {
-    const [y, m, d] = key.split('-').map(Number);
-    return new Date(y, m - 1, d).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-  }
+  const weekOf = (k) => weekKey(pdate(k));
+  const DOW = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const fmtShort = (k) => pdate(k).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+  const fmtDay = (k) => pdate(k).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
+  const fmtRange = (a, b) => `${fmtShort(a)} – ${fmtShort(b)}, ${pdate(b).getFullYear()}`;
+  const monthName = (k) => pdate(k).toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
 
   /* ---------- state ---------- */
   const emptyFilters = () => ({ q: '', protein: null, meal: null, level: null, quick: false, favs: false });
   const state = {
     recipes: [], byId: {},
     favorites: new Set(read(KEY_FAV, [])),
-    weeks: {},                         // all stored weeks, keyed by Monday
-    week: { key: weekKey(), ids: [], extra: [] }, // the current week (ids = known recipes)
+    plan: {},                          // { 'YYYY-MM-DD': recipeId }
+    queue: [],                         // Selected Dinners (recipe ids, not yet on a date)
+    view: { mode: 'week', anchor: weekKey(), sel: weekKey() }, // sel = the calendar week Shopping reads
+    selDay: null,                      // month view: the tapped day
+    picking: null,                     // { date, replace } while choosing from the Recipe Box
+    dlg: null,
+    today: todayKey(),
     filters: emptyFilters(),
     tab: 'home', canBack: false,
     openId: null, detailTab: 'overview',
   };
 
-  const isWeeks = (v) => v && typeof v === 'object' && !Array.isArray(v);
-  function readWeeks() {
+  const isObj = (v) => v && typeof v === 'object' && !Array.isArray(v);
+  const isDate = (k) => /^\d{4}-\d{2}-\d{2}$/.test(k);
+  function readLegacyWeeks() {
     let weeks = read(KEY_WEEKS, null);
-    if (!isWeeks(weeks)) {
+    if (!isObj(weeks)) {
       weeks = {};
-      const legacy = read(KEY_WEEK, null); // migrate the old single-week format, keeping its week
+      const legacy = read(KEY_WEEK, null);
       if (legacy && typeof legacy.key === 'string' && Array.isArray(legacy.ids) && legacy.ids.length) weeks[legacy.key] = legacy.ids;
     }
-    for (const k of Object.keys(weeks)) if (!Array.isArray(weeks[k])) delete weeks[k];
     return weeks;
   }
-  // Point state.week at the current Monday's entry. Other weeks stay untouched in state.weeks.
-  function loadWeek() {
-    if (!Object.keys(state.weeks).length) state.weeks = readWeeks();
-    const key = weekKey();
-    const stored = (state.weeks[key] || []).filter((id) => typeof id === 'string').slice(0, MAX_WEEK);
-    state.week = { key, ids: stored.filter((id) => state.byId[id]), extra: stored.filter((id) => !state.byId[id]) };
-    saveWeek();
+  const savePlan = () => write(KEY_PLAN, state.plan);
+  const saveQueue = () => write(KEY_QUEUE, state.queue);
+  // First run only (guarded by KEY_MIG, so refreshing never duplicates anything): copy old picks for the current and future
+  // weeks into Selected Dinners, because the old data never said which day. Past weeks are NOT given invented dates — they stay in
+  // the untouched dd.weeks.v2 record and are listed read-only under "Earlier selections".
+  function migrate() {
+    if (read(KEY_MIG, false)) return;
+    const weeks = readLegacyWeeks();
+    const thisWeek = weekKey();
+    for (const key of Object.keys(weeks).filter(isDate).sort()) {
+      if (key < thisWeek) continue;
+      for (const id of (Array.isArray(weeks[key]) ? weeks[key] : [])) if (typeof id === 'string') addToQueue(id);
+    }
+    saveQueue();
+    write(KEY_MIG, true);
   }
-  function saveWeek() {
-    const { key, ids, extra } = state.week;
-    const all = [...ids, ...extra];
-    if (all.length) state.weeks[key] = all; else delete state.weeks[key];
-    write(KEY_WEEKS, state.weeks);
+  function earlierSelections() {
+    const weeks = readLegacyWeeks(), thisWeek = weekKey(pdate(state.today));
+    return Object.keys(weeks).filter((k) => isDate(k) && k < thisWeek).sort().reverse()
+      .map((k) => [k, (Array.isArray(weeks[k]) ? weeks[k] : []).filter((id) => state.byId[id])]).filter(([, ids]) => ids.length);
   }
-  // Called when the app becomes visible again: if Monday has rolled over, start the new (empty) week.
-  function checkWeek() {
-    if (weekKey() === state.week.key) return;
-    loadWeek();
-    afterWeekChange();
-    $$('[data-week]').forEach((b) => syncButtons(b.dataset.week));
+  function loadPlan() {
+    const p = read(KEY_PLAN, {});
+    state.plan = {};
+    if (isObj(p)) for (const k of Object.keys(p)) if (isDate(k) && typeof p[k] === 'string') state.plan[k] = p[k];
+    const q = read(KEY_QUEUE, []);
+    state.queue = Array.isArray(q) ? q.filter((id) => typeof id === 'string') : [];
+    migrate();
+    const mode = read(KEY_VIEW, 'week');
+    if (['week', '2weeks', 'month'].includes(mode)) state.view.mode = mode;
   }
+  const queueIds = () => state.queue.filter((id) => state.byId[id]);
+  const planned = (date) => (state.plan[date] && state.byId[state.plan[date]] ? state.plan[date] : null);
+  function plannedInWeek(weekStart) {
+    const out = [];
+    for (let i = 0; i < 7; i++) { const d = addDays(weekStart, i), id = planned(d); if (id) out.push({ date: d, id }); }
+    return out;
+  }
+  const removeFromQueue = (id) => { const i = state.queue.indexOf(id); if (i >= 0) state.queue.splice(i, 1); };
+  const addToQueue = (id) => { if (!state.queue.includes(id)) state.queue.push(id); };
+  // Called when the app becomes visible again: if the date has rolled over, refresh "today" and follow the new week.
+  function checkToday() {
+    const t = todayKey();
+    if (t === state.today) return;
+    const wasCurrent = state.view.sel === weekOf(state.today);
+    state.today = t;
+    if (wasCurrent) setSel(weekOf(t));
+    afterPlanChange();
+  }
+  function setSel(key) { state.view.sel = key; state.view.anchor = key; }
   const saveFavs = () => write(KEY_FAV, [...state.favorites]);
 
   /* ---------- small UI icons ---------- */
@@ -103,6 +147,7 @@
   }
   function ingredientRow(i) {
     if (i.unit === 'pinch') return { amt: 'to taste', soft: true };
+    if ((i.quantity === '' || i.quantity == null) && !i.unit) return { amt: 'as needed', soft: true };
     return { amt: `${fmtQty(i.quantity)} ${i.unit || ''}`.trim(), soft: false };
   }
   const meta = (r) => `${cap(r.difficulty)} · ${r.cost} · Serves ${r.servings}`;
@@ -170,10 +215,18 @@
     const on = state.favorites.has(id);
     return `<button class="heart" data-fav="${esc(id)}" aria-pressed="${on}" aria-label="Favorite"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></svg></button>`;
   }
+  // "Add to Week" puts a recipe in Selected Dinners. While choosing a dinner for a specific day it becomes "Pick for <day>".
+  function wkState(id, mini) {
+    if (state.picking) {
+      const d = state.picking.date;
+      return { on: false, ico: '＋', lbl: mini ? `Pick ${DOW[(pdate(d).getDay() + 6) % 7]}` : `Pick for ${fmtDay(d)}` };
+    }
+    const on = state.queue.includes(id);
+    return { on, ico: on ? '✓' : '＋', lbl: mini ? (on ? 'Selected' : 'Add to Week') : (on ? 'In Selected Dinners' : 'Add to Week') };
+  }
   function weekButton(id, mini) {
-    const on = state.week.ids.includes(id);
-    const lbl = mini ? (on ? 'This Week' : 'Add to Week') : (on ? 'In This Week' : 'Add to Week');
-    return `<button class="act wk${mini ? ' mini' : ''}" data-week="${esc(id)}" aria-pressed="${on}"><span class="ico" aria-hidden="true">${on ? '✓' : '＋'}</span><span class="lbl">${lbl}</span></button>`;
+    const w = wkState(id, mini);
+    return `<button class="act wk${mini ? ' mini' : ''}" data-week="${esc(id)}" aria-pressed="${w.on}"><span class="ico" aria-hidden="true">${w.ico}</span><span class="lbl">${esc(w.lbl)}</span></button>`;
   }
   function card(r) {
     const main = cap(r.protein[0]);
@@ -202,30 +255,236 @@
   }
 
   /* ---------- rendering: This Week + Favorites ---------- */
-  function slotCard(r) {
-    return `
-      <article class="slot">
-        <button class="slot-main" data-open="${esc(r.id)}" aria-label="Open ${esc(r.name)}">
-          <span class="art">${Art.dish(r)}</span>
-          <span class="card-body">
-            <span class="card-title">${esc(r.name)}</span>
-            <span class="meta">${r.timeMinutes} min · ${esc(cap(r.difficulty))} · ${esc(r.cost)}</span>
-          </span>
-        </button>
-        <button class="linkbtn slot-remove" data-remove="${esc(r.id)}" aria-label="Remove ${esc(r.name)} from this week">Remove</button>
-      </article>`;
+  const ICON_PREV = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>';
+  const ICON_NEXT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>';
+  const ICON_POT = '<svg viewBox="0 0 24 24" class="pot" aria-hidden="true"><path d="M5 10h14v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"/><path d="M3 10h2M19 10h2M9 6c0-1.5 1-1.5 1-3M14 6c0-1.5 1-1.5 1-3"/></svg>';
+
+  function mealCard(date, id) {
+    const r = state.byId[id];
+    return `<div class="meal" draggable="true" data-drag="plan:${date}">
+      <button class="meal-open" data-open="${esc(id)}" aria-label="Open ${esc(r.name)}">
+        <span class="art">${Art.dish(r)}</span>
+        <span class="meal-text"><span class="meal-name">${esc(r.name)}</span><span class="meal-meta">${r.timeMinutes} min</span></span>
+      </button>
+      <button class="meal-menu" data-meal-menu="${date}" aria-label="Options for ${esc(r.name)}, ${esc(fmtDay(date))}">⋯</button>
+    </div>`;
+  }
+  const addBtn = (date) => `<button class="add-day" data-add-day="${date}" aria-label="Add dinner on ${esc(fmtDay(date))}"><span class="plus" aria-hidden="true">＋</span><span>Add dinner</span></button>`;
+  const dayBody = (date) => (planned(date) ? mealCard(date, planned(date)) : addBtn(date));
+
+  function dayEl(date) {
+    const idx = (pdate(date).getDay() + 6) % 7;
+    const cls = date === state.today ? ' today' : date < state.today ? ' past' : '';
+    return `<div class="day${cls}" data-drop="${date}">
+      <div class="day-label"><b>${DOW[idx]}</b><span>${esc(fmtShort(date))}</span></div>
+      <div class="day-body">${dayBody(date)}</div>
+    </div>`;
+  }
+  const weekGrid = (start) => `<div class="wk-grid" role="group" aria-label="Week of ${esc(fmtShort(start))}">${Array.from({ length: 7 }, (_, i) => dayEl(addDays(start, i))).join('')}</div>`;
+
+  function monthRange(anchor) {
+    const first = new Date(pdate(anchor).getFullYear(), pdate(anchor).getMonth(), 1, 12);
+    const last = new Date(first.getFullYear(), first.getMonth() + 1, 0, 12);
+    return { first: dkey(first), last: dkey(last), start: weekKey(first), end: addDays(weekKey(last), 6) };
+  }
+  function monthGrid(anchor) {
+    const { first, last, start, end } = monthRange(anchor);
+    if (!state.selDay || state.selDay < start || state.selDay > end) state.selDay = (state.today >= first && state.today <= last) ? state.today : first;
+    const cells = [];
+    for (let d = start; d <= end; d = addDays(d, 1)) {
+      const id = planned(d);
+      const cls = [d < first || d > last ? 'out' : '', d === state.today ? 'today' : '', d === state.selDay ? 'sel' : '', id ? 'has' : ''].filter(Boolean).join(' ');
+      cells.push(`<button class="mcell ${cls}" data-day-select="${d}" data-drop="${d}" aria-pressed="${d === state.selDay}" aria-label="${esc(fmtDay(d))}${id ? ', ' + esc(state.byId[id].name) : ', no dinner'}">
+        <span class="mnum">${pdate(d).getDate()}</span><span class="mname">${id ? esc(state.byId[id].name) : ''}</span><span class="mdot"></span></button>`);
+    }
+    const sel = state.selDay;
+    return `<div class="mo-head" aria-hidden="true">${DOW.map((d) => `<span>${d}</span>`).join('')}</div>
+      <div class="mo-grid">${cells.join('')}</div>
+      <div class="day-panel" data-drop="${sel}">
+        <h3>${esc(pdate(sel).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }))}</h3>
+        <div class="day-body">${dayBody(sel)}</div>
+      </div>`;
+  }
+
+  function calendarState() {
+    const { mode, anchor } = state.view;
+    if (mode === 'month') {
+      const r = monthRange(anchor);
+      return { range: monthName(r.first), from: r.first, to: r.last, body: monthGrid(anchor), sub: monthName(r.first) };
+    }
+    const days = mode === '2weeks' ? 14 : 7;
+    const to = addDays(anchor, days - 1);
+    const body = mode === '2weeks'
+      ? `<h3 class="wk-sub">Week of ${esc(fmtShort(anchor))}</h3>${weekGrid(anchor)}<h3 class="wk-sub">Week of ${esc(fmtShort(addDays(anchor, 7)))}</h3>${weekGrid(addDays(anchor, 7))}`
+      : weekGrid(anchor);
+    return { range: fmtRange(anchor, to), from: anchor, to, body, sub: mode === 'week' ? `Week of ${fmtShort(anchor)}, ${pdate(anchor).getFullYear()}` : fmtRange(anchor, to) };
+  }
+  function countPlanned(from, to) {
+    let n = 0;
+    for (let d = from; d <= to; d = addDays(d, 1)) if (planned(d)) n++;
+    return n;
+  }
+
+  function queueItem(id) {
+    const r = state.byId[id];
+    return `<div class="qitem" draggable="true" data-drag="queue:${esc(id)}">
+      <button class="q-open" data-open="${esc(id)}" aria-label="Open ${esc(r.name)}"><span class="art">${Art.dish(r)}</span><span class="q-name">${esc(r.name)}</span></button>
+      <button class="q-assign" data-q-assign="${esc(id)}" aria-label="Assign ${esc(r.name)} to a day">Assign</button>
+      <button class="q-remove" data-q-remove="${esc(id)}" aria-label="Remove ${esc(r.name)} from Selected Dinners">✕</button>
+    </div>`;
   }
   function renderWeek() {
-    const ids = state.week.ids;
-    const slots = ids.map((id) => slotCard(state.byId[id]));
-    for (let i = ids.length; i < MAX_WEEK; i++) {
-      slots.push('<button class="act slot slot-empty" data-go="recipes"><span class="plus" aria-hidden="true">＋</span>Pick a dinner</button>');
-    }
+    const c = calendarState();
+    const n = countPlanned(c.from, c.to);
+    const q = queueIds();
+    const mode = state.view.mode;
+    const seg = [['week', '1 Week'], ['2weeks', '2 Weeks'], ['month', 'Month']].map(([k, l]) => `<button data-view-mode="${k}" aria-pressed="${mode === k}">${l}</button>`).join('');
     $('#view-week').innerHTML = `
-      <div class="view-head"><h2>This Week</h2><p>Week of ${esc(weekLabel(state.week.key))}. ${ids.length} of ${MAX_WEEK} dinners picked.</p></div>
-      <div class="slots">${slots.join('')}</div>
-      ${Art.decor('weekRosemary', 'decor list-end mascot')}`;
+      <div class="plan-head"><h2>Plan This Week</h2><p>${esc(c.sub)} · ${n} ${n === 1 ? 'dinner' : 'dinners'} planned</p></div>
+      <div class="cal">
+        ${Art.decor('weekRosemary', 'rosemary-peek')}
+        <div class="cal-bar">
+          <div class="cal-nav">
+            <button class="navbtn" data-cal-nav="-1" aria-label="Previous ${mode === 'month' ? 'month' : mode === '2weeks' ? 'two weeks' : 'week'}">${ICON_PREV}</button>
+            <div class="cal-range" aria-live="polite">${esc(c.range)}</div>
+            <button class="navbtn" data-cal-nav="1" aria-label="Next ${mode === 'month' ? 'month' : mode === '2weeks' ? 'two weeks' : 'week'}">${ICON_NEXT}</button>
+          </div>
+          <div class="cal-ctl">
+            <div class="seg" role="group" aria-label="Calendar view">${seg}</div>
+            <button class="todaybtn" data-cal-today>Today</button>
+          </div>
+        </div>
+        ${c.body}
+      </div>
+      <section class="queue" aria-labelledby="qh">
+        <h3 id="qh">Selected Dinners</h3>
+        <p class="qsub">Drag a recipe to a day on the calendar, or tap Assign.</p>
+        ${q.length
+          ? `<div class="qlist">${q.map(queueItem).join('')}</div>`
+          : `<div class="q-empty">${ICON_POT}<p><b>No dinners selected yet.</b><br>Browse recipes and add some to get started!</p><button class="linkbtn" data-go="recipes">Browse recipes</button></div>`}
+      </section>
+      ${earlierBlock()}`;
   }
+  function earlierBlock() {
+    const e = earlierSelections();
+    if (!e.length) return '';
+    return `<details class="earlier"><summary>Earlier selections (${e.reduce((n, [, ids]) => n + ids.length, 0)})</summary>
+      <p class="qsub">Dinners you picked in past weeks, before the calendar. They weren’t tied to a day, so they’re listed here as they were saved.</p>
+      ${e.map(([k, ids]) => `<h4>Week of ${esc(fmtShort(k))}, ${pdate(k).getFullYear()}</h4><ul class="dlg-list">${ids.map((id) => `<li class="qitem"><button class="q-open" data-open="${esc(id)}"><span class="art">${Art.dish(state.byId[id])}</span><span class="q-name">${esc(state.byId[id].name)}</span></button><button class="q-assign" data-q-add="${esc(id)}">Add to Selected</button></li>`).join('')}</ul>`).join('')}
+    </details>`;
+  }
+
+  /* ---------- dialogs (assign, move, replace) ---------- */
+  function openDlg(title, body, ctx) {
+    closeDlg();
+    state.dlg = ctx || {};
+    const el = document.createElement('div');
+    el.className = 'dlg-back';
+    el.id = 'dlg';
+    el.innerHTML = `<div class="dlg" role="dialog" aria-modal="true" aria-label="${esc(title)}">
+      <div class="dlg-head"><h3>${esc(title)}</h3><button class="dlg-x" data-dlg-close aria-label="Close">✕</button></div>
+      <div class="dlg-body">${body}</div></div>`;
+    document.body.appendChild(el);
+    document.body.classList.add('dlg-open');
+    const first = $('.dlg-body button, .dlg-body input', el);
+    if (first) first.focus({ preventScroll: true });
+  }
+  function closeDlg() {
+    const el = $('#dlg');
+    if (el) el.remove();
+    document.body.classList.remove('dlg-open');
+    state.dlg = null;
+  }
+  const rowArt = (r) => `<span class="art">${Art.dish(r)}</span>`;
+
+  function addDayDlg(date) {
+    const q = queueIds();
+    const body = (q.length
+      ? `<h4>From Selected Dinners</h4><ul class="dlg-list">${q.map((id) => `<li><button class="dlg-row" data-place-queue="${esc(id)}">${rowArt(state.byId[id])}<span>${esc(state.byId[id].name)}</span></button></li>`).join('')}</ul>`
+      : '') + `<button class="btn" data-pick-recipes>Choose from Recipe Box</button>`;
+    openDlg(`Dinner for ${fmtDay(date)}`, body, { kind: 'add', date });
+  }
+  function mealMenuDlg(date) {
+    const id = planned(date);
+    if (!id) return;
+    openDlg(state.byId[id].name, `<div class="dlg-stack">
+      <button class="btn ghost" data-menu="open">Open recipe</button>
+      <button class="btn ghost" data-menu="move">Move to another day</button>
+      <button class="btn ghost" data-menu="replace">Replace with another recipe</button>
+      <button class="btn ghost" data-menu="unschedule">Back to Selected Dinners</button>
+      <button class="btn danger" data-menu="remove">Remove from this day</button></div>`, { kind: 'menu', date, id });
+  }
+  function chooseDayDlg(src) {
+    const start = state.view.sel;
+    const group = (w) => `<h4>Week of ${esc(fmtShort(w))}</h4><ul class="dlg-list">${Array.from({ length: 7 }, (_, i) => addDays(w, i)).map((d) => {
+      const id = planned(d);
+      const self = src.type === 'plan' && src.date === d;
+      return `<li><button class="dlg-row" data-place-day="${d}"${self ? ' disabled' : ''}><b>${esc(fmtDay(d))}</b><span class="sub">${self ? 'Current day' : id ? esc(state.byId[id].name) : 'Open'}</span></button></li>`;
+    }).join('')}</ul>`;
+    openDlg('Choose a day', group(start) + group(addDays(start, 7)) + `<label class="dlg-date"><span>Another date</span><input type="date" id="dlg-date"></label><button class="btn ghost" data-place-date>Use this date</button>`, { kind: 'choose', src });
+  }
+  function askReplace(date, id, src) {
+    const ex = state.plan[date];
+    const exName = state.byId[ex].name, name = state.byId[id].name;
+    const swap = src.type === 'plan';
+    openDlg(swap ? 'Swap dinners?' : 'Replace dinner?',
+      `<p class="dlg-text">${esc(fmtDay(date))} already has <b>${esc(exName)}</b>.${swap
+        ? ` Swap it with <b>${esc(name)}</b>?`
+        : ` Replace it with <b>${esc(name)}</b>? ${esc(exName)} will go back to Selected Dinners.`}</p>
+       <div class="dlg-stack"><button class="btn" data-confirm="yes">${swap ? 'Swap' : 'Replace'}</button><button class="btn ghost" data-dlg-close>Cancel</button></div>`,
+      { kind: 'confirm', date, id, src });
+  }
+
+  // The one place a dinner lands on a date. src: {type:'queue'} | {type:'plan', date} | {type:'new'}
+  function place(date, id, src, opts = {}) {
+    if (src.type === 'plan' && src.date === date) { closeDlg(); return; }
+    const ex = planned(date);
+    if (ex && !opts.confirmed && !opts.discard) { askReplace(date, id, src); return; }
+    closeDlg();
+    if (src.type === 'plan') delete state.plan[src.date];
+    removeFromQueue(id);
+    if (ex) { if (opts.confirmed && src.type === 'plan') state.plan[src.date] = ex; else if (!opts.discard) addToQueue(ex); }
+    state.plan[date] = id;
+    savePlan(); saveQueue();
+    const wasPicking = !!state.picking;
+    state.picking = null;
+    renderPick();
+    afterPlanChange();
+    toast(`Planned for ${fmtDay(date)}`);
+    if (wasPicking) { state.canBack = false; location.hash = '#/week'; }
+  }
+  function unplan(date, toQueue) {
+    const id = state.plan[date];
+    if (!id) return;
+    delete state.plan[date];
+    if (toQueue) addToQueue(id);
+    savePlan(); saveQueue();
+    closeDlg();
+    afterPlanChange();
+    toast(toQueue ? 'Back in Selected Dinners' : 'Removed from this day');
+  }
+  function startPicking(date, replace) {
+    closeDlg();
+    state.picking = { date, replace: !!replace };
+    state.canBack = false;
+    renderPick();
+    renderList();
+    location.hash = '#/recipes';
+  }
+  function stopPicking() {
+    state.picking = null;
+    renderPick();
+    renderList();
+    location.hash = '#/week';
+  }
+  function renderPick() {
+    const el = $('#pickbar');
+    el.innerHTML = state.picking
+      ? `<div class="pickbar" role="status"><span>${state.picking.replace ? 'Replacing' : 'Choosing'} dinner for <b>${esc(fmtDay(state.picking.date))}</b></span><button class="linkbtn" data-pick-cancel>Cancel</button></div>`
+      : '';
+    $$('[data-week]').forEach((b) => syncButtons(b.dataset.week));
+  }
+
   function renderFavorites() {
     const items = state.recipes.filter((r) => state.favorites.has(r.id));
     $('#view-favorites').innerHTML = `
@@ -249,9 +508,11 @@
     ['favorites', 'Favorites', 'Save the ones you love', 'fav'],
   ];
   function renderHome() {
-    const n = state.week.ids.length;
-    const say = ['What sounds good this week?', 'Nice start — 2 more to go.', 'Almost there — one more.', 'Dinner’s decided.'][Math.min(n, 3)];
-    const pips = Array.from({ length: MAX_WEEK }, (_, i) => `<i class="${i < n ? 'on' : ''}"></i>`).join('');
+    const wk = weekKey(pdate(state.today));
+    const n = plannedInWeek(wk).length;
+    const waiting = queueIds().length;
+    const say = n === 0 ? 'What sounds good this week?' : n === 1 ? 'Nice start — 1 dinner planned.' : n === 2 ? 'Looking good — 2 dinners planned.' : 'Dinner’s decided.';
+    const pips = Array.from({ length: 7 }, (_, i) => `<i class="${planned(addDays(wk, i)) ? 'on' : ''}"></i>`).join('');
     $('#view-home').innerHTML = `
       <header class="home-head">
         <h1 class="wordmark">Dinner Darling</h1>
@@ -262,7 +523,7 @@
         <p class="home-say" role="status">${esc(say)}</p>
       </div>
       <a class="week-status" href="#/week">
-        <span class="ws-text"><b>This Week</b><span>${n} of ${MAX_WEEK} dinners picked</span></span>
+        <span class="ws-text"><b>This Week</b><span>${n} ${n === 1 ? 'dinner' : 'dinners'} planned${waiting ? ` · ${waiting} waiting` : ''}</span></span>
         <span class="pips" aria-hidden="true">${pips}</span>
       </a>
       <nav class="tiles" aria-label="Main">
@@ -280,7 +541,7 @@
   const NAME_ALIAS = {
     'ground cumin': 'cumin', 'garlic clove': 'garlic cloves', 'garlic': 'garlic cloves', 'carrot': 'carrots',
     'boneless chicken breast': 'chicken breast', 'boneless chicken breasts': 'chicken breast', 'chicken breasts': 'chicken breast',
-    'salmon': 'salmon fillets', 'celery ribs': 'celery', 'celery rib': 'celery', 'flour': 'all-purpose flour',
+    'salmon': 'salmon fillets', 'celery ribs': 'celery', 'celery stalks': 'celery', 'celery rib': 'celery', 'flour': 'all-purpose flour',
   };
   const normName = (item) => {
     let n = String(item).toLowerCase().replace(/\([^)]*\)/g, ' ').split(',')[0].replace(/\s+/g, ' ').trim();
@@ -302,6 +563,7 @@
   };
   function fmtAmount(fam, total, unit) {
     if (fam === 'pinch') return 'to taste';
+    if (!total) return 'as needed';
     if (fam === 'vol') {
       for (const [div, label, min] of [[48, 'cup', 12], [3, 'tbsp', 3], [1, 'tsp', 0]]) {
         const q = total / div;
@@ -329,7 +591,7 @@
   }
   function buildShopping() {
     const map = new Map();
-    for (const id of state.week.ids) {
+    for (const { id } of plannedInWeek(state.view.sel)) {
       const r = state.byId[id];
       for (const i of r.ingredients) {
         const name = normName(i.item);
@@ -349,28 +611,35 @@
     items.sort((a, b) => a.name.localeCompare(b.name));
     return items;
   }
-  const checkedSet = () => new Set((read(KEY_SHOP, {})[state.week.key]) || []);
+  const checkedSet = () => new Set(((read(KEY_SHOP, {}) || {})[state.view.sel]) || []);
   function toggleShop(key, on) {
     const set = checkedSet();
     on ? set.add(key) : set.delete(key);
-    write(KEY_SHOP, { [state.week.key]: [...set] }); // keeps only the current week
+    const all = read(KEY_SHOP, {}) || {};
+    all[state.view.sel] = [...set];
+    write(KEY_SHOP, all);
     renderShopping();
   }
-  function uncheckAll() { write(KEY_SHOP, {}); renderShopping(); }
+  function uncheckAll() { const all = read(KEY_SHOP, {}) || {}; delete all[state.view.sel]; write(KEY_SHOP, all); renderShopping(); }
   function shopRow(it, done) {
     return `<li class="shop-row${done.has(it.key) ? ' done' : ''}"><label>
         <input type="checkbox" data-shop="${esc(it.key)}"${done.has(it.key) ? ' checked' : ''}>
         <span class="box" aria-hidden="true"></span>
         <span class="shop-main"><span class="shop-name">${esc(cap(it.name))}</span><small>for ${esc(it.from.join(', '))}</small></span>
-        <span class="shop-amt${it.amt === 'to taste' ? ' soft' : ''}">${esc(it.amt)}</span>
+        <span class="shop-amt${it.amt === 'to taste' || it.amt === 'as needed' ? ' soft' : ''}">${esc(it.amt)}</span>
       </label></li>`;
   }
   function renderShopping() {
     const view = $('#view-shopping');
-    const n = state.week.ids.length;
+    const wk = state.view.sel;
+    const n = plannedInWeek(wk).length;
+    const waiting = queueIds().length;
+    const nav = `<div class="shop-week"><button class="navbtn" data-shop-week="-1" aria-label="Previous week">${ICON_PREV}</button><span class="sw-range"><b>${esc(fmtDay(wk))} – ${esc(fmtDay(addDays(wk, 6)))}, ${pdate(wk).getFullYear()}</b>${wk === weekKey(pdate(state.today)) ? '<small>This week</small>' : '<button class="linkbtn" data-shop-today>Back to this week</button>'}</span><button class="navbtn" data-shop-week="1" aria-label="Next week">${ICON_NEXT}</button></div>`;
+    const hint = waiting ? `<p class="shop-hint">${waiting} selected ${waiting === 1 ? 'dinner isn’t' : 'dinners aren’t'} on the calendar yet, so ${waiting === 1 ? 'it’s' : 'they’re'} not on this list.</p>` : '';
     if (!n) {
       view.innerHTML = `
-        <div class="view-head"><h2>Shopping List</h2><p>Pick dinners for the week and everything you need shows up here.</p></div>
+        <div class="view-head"><h2>Shopping List</h2></div>${nav}
+        <p class="shop-note">No dinners are planned for these dates yet. Plan some and everything you need shows up here.</p>${hint}
         ${Art.decor('shoppingEmpty', 'decor')}
         <div class="empty"><button class="linkbtn" data-go="week">Plan This Week</button></div>`;
       return;
@@ -382,13 +651,17 @@
     const groups = CATS.map(([k, label]) => [label, buy.filter((i) => i.cat === k)]).filter(([, l]) => l.length);
     const anyDone = items.some((i) => done.has(i.key));
     view.innerHTML = `
-      <div class="view-head"><h2>Shopping List</h2><p>For this week’s ${n} ${n === 1 ? 'dinner' : 'dinners'}.${anyDone ? ' <button class="linkbtn" data-uncheck>Uncheck all</button>' : ''}</p></div>
+      <div class="view-head"><h2>Shopping List</h2></div>${nav}
+      <p class="shop-note">Covers the ${n} ${n === 1 ? 'dinner' : 'dinners'} planned for these seven days.${anyDone ? ' <button class="linkbtn" data-uncheck>Uncheck all</button>' : ''}</p>${hint}
       ${groups.map(([label, list]) => `<section class="shop-group"><h3>${esc(label)}</h3><ul class="shop-list">${list.map((i) => shopRow(i, done)).join('')}</ul></section>`).join('')}
       ${staples.length ? `<details class="shop-group staples"><summary>Probably in your pantry (${staples.length})</summary><ul class="shop-list">${staples.map((i) => shopRow(i, done)).join('')}</ul></details>` : ''}`;
   }
-  function afterWeekChange() { renderWeek(); renderShopping(); renderHome(); updateBadge(); }
+  function afterPlanChange() {
+    renderWeek(); renderShopping(); renderHome(); updateBadge();
+    $$('[data-week]').forEach((b) => syncButtons(b.dataset.week));
+  }
   function updateBadge() {
-    const n = state.week.ids.length;
+    const n = plannedInWeek(weekKey(pdate(state.today))).length;
     const b = $('#badge');
     b.textContent = n;
     b.hidden = n === 0;
@@ -513,11 +786,12 @@
       if (ico) ico.textContent = on ? '♥' : '♡';
       if (lbl) lbl.textContent = on ? 'Saved' : 'Save';
     });
-    const inWeek = state.week.ids.includes(id);
     $$(`[data-week="${CSS.escape(id)}"]`).forEach((b) => {
-      b.setAttribute('aria-pressed', inWeek);
-      $('.ico', b).textContent = inWeek ? '✓' : '＋';
-      $('.lbl', b).textContent = b.classList.contains('mini') ? (inWeek ? 'This Week' : 'Add to Week') : (inWeek ? 'In This Week' : 'Add to Week');
+      const mini = b.classList.contains('mini');
+      const w = wkState(id, mini);
+      b.setAttribute('aria-pressed', w.on);
+      $('.ico', b).textContent = w.ico;
+      $('.lbl', b).textContent = w.lbl;
     });
   }
 
@@ -530,13 +804,11 @@
   }
 
   function toggleWeek(id) {
-    const ids = state.week.ids;
-    if (ids.includes(id)) state.week.ids = ids.filter((x) => x !== id);
-    else if (ids.length + state.week.extra.length >= MAX_WEEK) { toast(`${MAX_WEEK} dinners picked. Remove one to swap.`); return; }
-    else ids.push(id);
-    saveWeek();
-    syncButtons(id);
-    afterWeekChange();
+    if (state.picking) { place(state.picking.date, id, { type: 'new' }, { discard: state.picking.replace }); return; }
+    if (state.queue.includes(id)) { removeFromQueue(id); toast('Removed from Selected Dinners'); }
+    else { addToQueue(id); toast('Added to Selected Dinners'); }
+    saveQueue();
+    afterPlanChange();
   }
 
   async function share(id) {
@@ -567,6 +839,46 @@
     renderList();
   }
 
+  /* ---------- calendar controls ---------- */
+  function setViewMode(mode) {
+    if (state.view.mode === mode) return;
+    state.view.mode = mode;
+    state.view.anchor = state.view.sel;
+    write(KEY_VIEW, mode);
+    renderWeek();
+  }
+  function calNav(n) {
+    const v = state.view;
+    if (v.mode === 'month') {
+      const d = pdate(v.anchor);
+      const first = dkey(new Date(d.getFullYear(), d.getMonth() + n, 1, 12));
+      v.anchor = first;
+      const r = monthRange(first);
+      v.sel = (state.today >= r.first && state.today <= r.last) ? weekOf(state.today) : weekOf(first);
+      state.selDay = null;
+    } else {
+      v.anchor = addDays(v.anchor, (v.mode === '2weeks' ? 14 : 7) * n);
+      v.sel = v.anchor;
+    }
+    renderWeek(); renderShopping();
+  }
+  function calToday() {
+    const v = state.view;
+    v.sel = weekOf(state.today);
+    v.anchor = v.mode === 'month' ? state.today : v.sel;
+    state.selDay = state.today;
+    renderWeek(); renderShopping();
+  }
+  function menuAction(action) {
+    const { date, id } = state.dlg || {};
+    if (!date) return;
+    if (action === 'open') { closeDlg(); state.canBack = true; location.hash = '#/recipe/' + encodeURIComponent(id); }
+    else if (action === 'move') chooseDayDlg({ type: 'plan', date });
+    else if (action === 'replace') startPicking(date, true);
+    else if (action === 'unschedule') unplan(date, true);
+    else if (action === 'remove') unplan(date, false);
+  }
+
   /* ---------- routing (hash based, so Back works on phones) ---------- */
   const TABS = ['home', 'recipes', 'week', 'shopping', 'favorites'];
   function setTab(tab) {
@@ -591,13 +903,13 @@
 
   /* ---------- events ---------- */
   document.addEventListener('click', (e) => {
-    const t = e.target.closest('[data-open],[data-fav],[data-week],[data-remove],[data-quick],[data-protein],[data-meal],[data-level],[data-clear],[data-go],[data-close],[data-tab],[data-rtab],[data-share],[data-uncheck],#more-btn');
+    const t = e.target.closest('[data-open],[data-fav],[data-week],[data-quick],[data-protein],[data-meal],[data-level],[data-clear],[data-go],[data-close],[data-tab],[data-rtab],[data-share],[data-uncheck],[data-view-mode],[data-cal-nav],[data-cal-today],[data-day-select],[data-add-day],[data-meal-menu],[data-q-assign],[data-q-remove],[data-q-add],[data-dlg-close],[data-place-day],[data-place-queue],[data-place-date],[data-menu],[data-confirm],[data-pick-recipes],[data-pick-cancel],[data-shop-week],[data-shop-today],#more-btn');
+    if (e.target.id === 'dlg') { closeDlg(); return; } // tapped the dimmed backdrop
     if (!t) return;
     const d = t.dataset;
     if (d.open) { state.canBack = true; location.hash = '#/recipe/' + encodeURIComponent(d.open); }
     else if (d.fav) toggleFav(d.fav);
     else if (d.week) toggleWeek(d.week);
-    else if (d.remove) toggleWeek(d.remove);
     else if (d.quick) setFilter(d.quick === 'easy' ? 'easy' : d.quick);
     else if (d.protein) setFilter('protein', d.protein);
     else if (d.meal) setFilter('meal', d.meal);
@@ -607,6 +919,30 @@
     else if (t.hasAttribute('data-close')) closeFromUI();
     else if (d.tab) { location.hash = tabHash(d.tab); window.scrollTo(0, 0); }
     else if (t.hasAttribute('data-uncheck')) uncheckAll();
+    else if (d.viewMode) setViewMode(d.viewMode);
+    else if (d.calNav) calNav(Number(d.calNav));
+    else if (t.hasAttribute('data-cal-today')) calToday();
+    else if (d.daySelect) { state.selDay = d.daySelect; state.view.sel = weekOf(d.daySelect); renderWeek(); renderShopping(); }
+    else if (d.addDay) addDayDlg(d.addDay);
+    else if (d.mealMenu) mealMenuDlg(d.mealMenu);
+    else if (d.qAssign) chooseDayDlg({ type: 'queue', id: d.qAssign });
+    else if (d.qAdd) { addToQueue(d.qAdd); saveQueue(); afterPlanChange(); toast('Added to Selected Dinners'); }
+    else if (d.qRemove) { removeFromQueue(d.qRemove); saveQueue(); afterPlanChange(); }
+    else if (t.hasAttribute('data-dlg-close')) closeDlg();
+    else if (d.placeQueue) place(state.dlg.date, d.placeQueue, { type: 'queue' });
+    else if (d.placeDay) { const src = state.dlg.src; place(d.placeDay, src.type === 'plan' ? state.plan[src.date] : src.id, src); }
+    else if (t.hasAttribute('data-place-date')) {
+      const v = ($('#dlg-date') || {}).value;
+      if (!v || !isDate(v)) { toast('Pick a date first'); return; }
+      const src = state.dlg.src;
+      place(v, src.type === 'plan' ? state.plan[src.date] : src.id, src);
+    }
+    else if (d.menu) menuAction(d.menu);
+    else if (d.confirm) { const c = state.dlg; place(c.date, c.id, c.src, { confirmed: true }); }
+    else if (t.hasAttribute('data-pick-recipes')) startPicking(state.dlg.date, false);
+    else if (t.hasAttribute('data-pick-cancel')) stopPicking();
+    else if (t.hasAttribute('data-shop-today')) { setSel(weekOf(state.today)); renderShopping(); renderWeek(); }
+    else if (d.shopWeek) { setSel(addDays(state.view.sel, 7 * Number(d.shopWeek))); renderShopping(); renderWeek(); }
     else if (d.rtab) { state.detailTab = d.rtab; renderPanel(); }
     else if (d.share) share(d.share);
     else if (t.id === 'more-btn') {
@@ -620,8 +956,38 @@
     const c = e.target.closest('input[data-shop]');
     if (c) toggleShop(c.dataset.shop, c.checked);
   });
+  // Drag a dinner (from Selected Dinners, or already on the calendar) onto a day. Tap-to-assign always works too.
+  let dragSrc = null;
+  document.addEventListener('dragstart', (e) => {
+    const el = e.target.closest && e.target.closest('[data-drag]');
+    if (!el) return;
+    dragSrc = el.dataset.drag;
+    e.dataTransfer.setData('text/plain', dragSrc);
+    e.dataTransfer.effectAllowed = 'move';
+    el.classList.add('dragging');
+  });
+  document.addEventListener('dragend', (e) => { dragSrc = null; e.target.classList && e.target.classList.remove('dragging'); $$('.over').forEach((z) => z.classList.remove('over')); });
+  document.addEventListener('dragover', (e) => {
+    const z = dragSrc && e.target.closest && e.target.closest('[data-drop]');
+    $$('.over').forEach((o) => { if (o !== z) o.classList.remove('over'); });
+    if (z) { e.preventDefault(); z.classList.add('over'); }
+  });
+  document.addEventListener('drop', (e) => {
+    const z = e.target.closest && e.target.closest('[data-drop]');
+    if (!z || !dragSrc) return;
+    e.preventDefault();
+    const [kind, ref] = [dragSrc.slice(0, dragSrc.indexOf(':')), dragSrc.slice(dragSrc.indexOf(':') + 1)];
+    dragSrc = null;
+    $$('.over').forEach((o) => o.classList.remove('over'));
+    if (kind === 'queue') place(z.dataset.drop, ref, { type: 'queue' });
+    else if (kind === 'plan' && planned(ref)) place(z.dataset.drop, state.plan[ref], { type: 'plan', date: ref });
+  });
   window.addEventListener('hashchange', route);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('#sheet').hidden) closeFromUI(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if ($('#dlg')) closeDlg();
+    else if (!$('#sheet').hidden) closeFromUI();
+  });
 
   /* ---------- boot ---------- */
   async function init() {
@@ -641,18 +1007,19 @@
     } catch { /* artwork slots are optional */ }
 
     state.favorites = new Set([...state.favorites].filter((id) => state.byId[id]));
-    loadWeek();
+    loadPlan();
     $('#vine').innerHTML = Art.vine();
     renderFilters();
     renderList();
     renderFavorites();
-    afterWeekChange();
+    renderPick();
+    afterPlanChange();
     route();
   }
   init();
-  document.addEventListener('visibilitychange', () => { if (!document.hidden) checkWeek(); });
-  window.addEventListener('pageshow', checkWeek);
-  window.addEventListener('focus', checkWeek);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) checkToday(); });
+  window.addEventListener('pageshow', checkToday);
+  window.addEventListener('focus', checkToday);
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
