@@ -137,7 +137,7 @@ svg { display: block; }
 .view-head.has-mascot .head-text { min-width: 0; align-self: flex-start; }
 .head-mascot { flex: none; height: auto; margin-bottom: 8px; pointer-events: none; }
 .head-mascot.ollie { width: 88px; margin-bottom: 16px; }
-.head-mascot.basil { width: 118px; }
+.head-mascot.basil { width: 118px; transform: scaleX(-1); }
 .view-head p { margin: 6px 0 20px; color: var(--ink-soft); }
 
 /* ---------- Tab bar ---------- */
@@ -395,6 +395,8 @@ body.dlg-open { overflow: hidden; }
   .app { max-width: 860px; padding-top: 40px; }
   .masthead, #view-recipes > :not(#list), #view-favorites > :not(.list), #view-shopping, #view-home { max-width: 560px; }
   #view-home, #view-shopping { margin: 0 auto; }
+  #view-favorites { position: relative; }
+  #view-favorites .head-mascot.basil { position: absolute; top: 0; right: 40px; margin: 0; }
   body[data-tab="recipes"] .masthead, #view-recipes > :not(#list), #view-favorites > :not(.list) { margin-left: calc((100% - 560px) / 2); }
   .list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 }
