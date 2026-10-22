@@ -38,7 +38,7 @@ svg { display: block; }
 .masthead { --mark: min(2.5rem, calc((100vw - 40px) / 10.6)); padding: 2px 0 6px; }
 .lockup { display: flex; align-items: center; }
 .lockup-text { flex: none; position: relative; z-index: 1; }
-.vine-slot { position: static; flex: none; width: calc(var(--mark) * 1.75); margin-left: calc(var(--mark) * 0.3); pointer-events: none; }
+.vine-slot { position: static; flex: none; width: calc(var(--mark) * 1.925); margin-left: calc(var(--mark) * 0.3); pointer-events: none; }
 .vine-slot .vine, .vine-slot svg { display: block; width: 100%; height: auto; }
 .decor { display: block; width: 150px; max-height: 120px; margin: 0 auto 14px; object-fit: contain; }
 .decor.list-end { width: 130px; margin: 26px auto 0; }
@@ -393,9 +393,9 @@ body.dlg-open { overflow: hidden; }
 }
 @media (min-width: 700px) {
   .app { max-width: 860px; padding-top: 40px; }
-  .masthead, #view-recipes > :not(#list), #view-shopping, #view-home { max-width: 560px; }
+  .masthead, #view-recipes > :not(#list), #view-favorites > :not(.list), #view-shopping, #view-home { max-width: 560px; }
   #view-home, #view-shopping { margin: 0 auto; }
-  body[data-tab="recipes"] .masthead, #view-recipes > :not(#list) { margin-left: calc((100% - 560px) / 2); }
+  body[data-tab="recipes"] .masthead, #view-recipes > :not(#list), #view-favorites > :not(.list) { margin-left: calc((100% - 560px) / 2); }
   .list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 }
 @media (min-width: 1100px) {
