@@ -133,6 +133,10 @@ svg { display: block; }
 
 /* ---------- This Week + Favorites ---------- */
 .view-head h2 { margin: 6px 0 0; font-family: var(--serif); font-weight: 700; font-size: 1.75rem; letter-spacing: -0.02em; line-height: 1.1; }
+.view-head.has-mascot { position: relative; min-height: 112px; padding-right: 128px; }
+.head-mascot { position: absolute; right: 2px; bottom: 8px; height: auto; pointer-events: none; }
+.head-mascot.ollie { width: 80px; bottom: 16px; }
+.head-mascot.basil { width: 118px; }
 .view-head p { margin: 6px 0 20px; color: var(--ink-soft); }
 
 /* ---------- Tab bar ---------- */
@@ -257,11 +261,11 @@ body[data-tab="home"] .tabbar { border-top-color: transparent; }
 
 /* ---------- Plan This Week (calendar) ---------- */
 #view-week { --peek: clamp(104px, 30vw, 170px); }
-.plan-head { min-height: calc(var(--peek) * 0.72 + 4px); padding-right: calc(var(--peek) + 10px); }
+.plan-head { min-height: calc(var(--peek) * 0.9 + 4px); padding-right: calc(var(--peek) * 0.63 + 22px); }
 .plan-head h2 { margin: 6px 0 0; font-family: var(--serif); font-weight: 700; font-size: 1.75rem; letter-spacing: -0.02em; line-height: 1.1; }
 .plan-head p { margin: 6px 0 8px; color: var(--ink-soft); font-size: .9375rem; }
 .cal { position: relative; border: 1.5px solid var(--line); border-radius: 18px; background: var(--paper); }
-.rosemary-peek { position: absolute; right: 12px; bottom: calc(100% - 2px); width: var(--peek); height: auto; pointer-events: none; }
+.rosemary-peek { position: absolute; right: 14px; bottom: calc(100% - 2px); width: calc(var(--peek) * 0.63); height: auto; pointer-events: none; }
 .cal-bar { display: flex; flex-direction: column; gap: 10px; padding: 10px; border-bottom: 1.5px solid var(--line); }
 .cal-nav, .cal-ctl, .shop-week { display: flex; align-items: center; gap: 8px; }
 .cal-range { flex: 1; text-align: center; font-family: var(--serif); font-weight: 700; font-size: 1.0625rem; }

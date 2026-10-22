@@ -1,11 +1,11 @@
 // Dinner Darling service worker.
 // Bump VERSION when shipping changes to app files so phones pick them up.
-const VERSION = 'v36';
+const VERSION = 'v38';
 const CACHE = `dinner-darling-${VERSION}`;
 const SHELL = [
   './', 'index.html', 'styles.css', 'app.js', 'art.js', 'recipes.json', 'assets/assets.json', 'manifest.webmanifest',
   'fonts/fraunces.woff2', 'fonts/fraunces-italic.woff2', 'fonts/figtree.woff2',
-  'icons/tomato.svg', 'assets/decor/basil.webp', 'assets/decor/garlic.webp', 'assets/decor/herbs.webp', 'assets/decor/lemon-branch.webp', 'assets/decor/olive.webp', 'assets/decor/rosemary-peek.webp', 'assets/header-vine.webp', 'assets/mascot/tilly-header.webp', 'assets/mascot/tilly-cooking-home.webp', 'assets/meal-type/pasta.webp', 'assets/meal-type/bowls.webp', 'assets/meal-type/salad.webp', 'assets/meal-type/sheet-pan.webp', 'assets/meal-type/skillet.webp', 'assets/meal-type/soup.webp', 'assets/protein/chicken.webp', 'assets/protein/pork.webp', 'assets/protein/salmon.webp', 'assets/protein/steak.webp', 'assets/protein/fish.webp', 'assets/protein/beef.webp', 'assets/protein/vegetarian.webp', 'assets/protein/turkey.webp', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'
+  'icons/tomato.svg', 'assets/decor/basil.webp', 'assets/decor/garlic.webp', 'assets/decor/herbs.webp', 'assets/decor/lemon-branch.webp', 'assets/decor/olive.webp', 'assets/decor/rosemary-peek.webp', 'assets/header-vine.webp', 'assets/mascot/tilly-header.webp', 'assets/mascot/basil-cat.webp', 'assets/mascot/ollie-olive.webp', 'assets/mascot/tilly-cooking-home.webp', 'assets/meal-type/pasta.webp', 'assets/meal-type/bowls.webp', 'assets/meal-type/salad.webp', 'assets/meal-type/sheet-pan.webp', 'assets/meal-type/skillet.webp', 'assets/meal-type/soup.webp', 'assets/protein/chicken.webp', 'assets/protein/pork.webp', 'assets/protein/salmon.webp', 'assets/protein/steak.webp', 'assets/protein/fish.webp', 'assets/protein/beef.webp', 'assets/protein/vegetarian.webp', 'assets/protein/turkey.webp', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (e) => {

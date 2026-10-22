@@ -27,7 +27,9 @@
     "noResults": "assets/decor/lemon-branch.webp",
     "listEnd": "assets/decor/olive.webp",
     "weekRosemary": "assets/decor/rosemary-peek.webp",
-    "favoritesFooter": "assets/decor/garlic.webp"
+    "favoritesFooter": "assets/decor/garlic.webp",
+    "favoritesMascot": "assets/mascot/basil-cat.webp",
+    "shoppingMascot": "assets/mascot/ollie-olive.webp"
   },
   "recipes": {
     "sesame-salmon-rice-bowl": "assets/meal-type/bowls.webp",

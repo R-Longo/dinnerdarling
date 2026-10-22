@@ -488,10 +488,10 @@
   function renderFavorites() {
     const items = state.recipes.filter((r) => state.favorites.has(r.id));
     $('#view-favorites').innerHTML = `
-      <div class="view-head"><h2>Favorites</h2><p>${items.length ? 'Dinners you saved.' : ''}</p></div>` +
+      <div class="view-head has-mascot">${Art.decor('favoritesMascot', 'head-mascot basil')}<h2>Favorites</h2><p>${items.length ? 'Dinners you saved.' : ''}</p></div>` +
       (items.length
-        ? `<div class="list">${items.map(card).join('')}</div>${Art.decor('favoritesFooter', 'decor list-end')}`
-        : `<div class="empty">${Art.decor('favoritesEmpty', 'decor')}<p>No favorites yet. Tap Save on any recipe to keep it here.</p><button class="linkbtn" data-go="recipes">Browse recipes</button></div>`);
+        ? `<div class="list">${items.map(card).join('')}</div>`
+        : `<div class="empty"><p>No favorites yet. Tap Save on any recipe to keep it here.</p><button class="linkbtn" data-go="recipes">Browse recipes</button></div>`);
   }
 
   /* ---------- rendering: Home ---------- */
@@ -638,9 +638,8 @@
     const hint = waiting ? `<p class="shop-hint">${waiting} selected ${waiting === 1 ? 'dinner isn’t' : 'dinners aren’t'} on the calendar yet, so ${waiting === 1 ? 'it’s' : 'they’re'} not on this list.</p>` : '';
     if (!n) {
       view.innerHTML = `
-        <div class="view-head"><h2>Shopping List</h2></div>${nav}
+        <div class="view-head has-mascot">${Art.decor('shoppingMascot', 'head-mascot ollie')}<h2>Shopping List</h2></div>${nav}
         <p class="shop-note">No dinners are planned for these dates yet. Plan some and everything you need shows up here.</p>${hint}
-        ${Art.decor('shoppingEmpty', 'decor')}
         <div class="empty"><button class="linkbtn" data-go="week">Plan This Week</button></div>`;
       return;
     }
@@ -651,7 +650,7 @@
     const groups = CATS.map(([k, label]) => [label, buy.filter((i) => i.cat === k)]).filter(([, l]) => l.length);
     const anyDone = items.some((i) => done.has(i.key));
     view.innerHTML = `
-      <div class="view-head"><h2>Shopping List</h2></div>${nav}
+      <div class="view-head has-mascot">${Art.decor('shoppingMascot', 'head-mascot ollie')}<h2>Shopping List</h2></div>${nav}
       <p class="shop-note">Covers the ${n} ${n === 1 ? 'dinner' : 'dinners'} planned for these seven days.${anyDone ? ' <button class="linkbtn" data-uncheck>Uncheck all</button>' : ''}</p>${hint}
       ${groups.map(([label, list]) => `<section class="shop-group"><h3>${esc(label)}</h3><ul class="shop-list">${list.map((i) => shopRow(i, done)).join('')}</ul></section>`).join('')}
       ${staples.length ? `<details class="shop-group staples"><summary>Probably in your pantry (${staples.length})</summary><ul class="shop-list">${staples.map((i) => shopRow(i, done)).join('')}</ul></details>` : ''}`;
