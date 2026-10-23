@@ -1,6 +1,6 @@
 // Dinner Darling service worker.
 // Bump VERSION when shipping changes to app files so phones pick them up.
-const VERSION = 'v41';
+const VERSION = 'v42';
 const CACHE = `dinner-darling-${VERSION}`;
 const SHELL = [
   './', 'index.html', 'styles.css', 'app.js', 'art.js', 'recipes.json', 'assets/assets.json', 'manifest.webmanifest',

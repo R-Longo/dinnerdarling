@@ -138,6 +138,9 @@ svg { display: block; }
 .head-mascot { flex: none; height: auto; margin-bottom: 8px; pointer-events: none; }
 .head-mascot.ollie { width: 88px; margin-bottom: 16px; }
 .head-mascot.basil { width: 118px; transform: scaleX(-1); }
+@media (max-width: 699px) {
+  .head-mascot.basil { width: 106px; position: relative; left: clamp(0px, calc(100vw - 294px), 48px); }
+}
 .view-head p { margin: 6px 0 20px; color: var(--ink-soft); }
 
 /* ---------- Tab bar ---------- */
