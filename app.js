@@ -666,6 +666,75 @@
     b.hidden = n === 0;
   }
 
+  /* ---------- amounts inline in the instructions ---------- */
+  const ADJ = new Set(['fresh','boneless','skinless','unsalted','salted','large','small','medium','diced','chopped','minced','shredded','grated','low-sodium','extra-virgin','extra','virgin','light','dark','whole','sliced','cooked','canned','dried','frozen','ripe','plain','finely','roughly','thinly','crushed','toasted','baby','sweet','hot','mild','lean','thick','thin','cut','reduced-sodium','full-fat','low-fat','fat-free','heavy','italian','kosher','flaky','coarse','boneless,','skinless,','better','than']);
+  const GENERIC = new Set(['salt','pepper','water']);
+  const ingNorm = (s) => s.toLowerCase().replace(/\(.*?\)/g, ' ').split(/[,;]/)[0].replace(/\s+/g, ' ').trim();
+  function variants(phrase) {
+    const out = new Set([phrase]);
+    const w = phrase.split(' '); const last = w[w.length - 1];
+    const sing = last.endsWith('ies') ? last.slice(0, -3) + 'y' : last.endsWith('oes') ? last.slice(0, -2) : last.endsWith('s') && !last.endsWith('ss') ? last.slice(0, -1) : null;
+    const plur = last.endsWith('y') ? last.slice(0, -1) + 'ies' : last.endsWith('s') ? null : last + 's';
+    for (const v of [sing, plur]) if (v) out.add([...w.slice(0, -1), v].join(' '));
+    return [...out];
+  }
+  function candidates(item) {
+    const alts = ingNorm(item).split(/\s+or\s+/).filter(Boolean);
+    const cands = [];
+    for (const a of alts) {
+      let words = a.split(' ');
+      while (words.length > 1 && ADJ.has(words[0])) words = words.slice(1);
+      if (words.length > 1 && words[0].length >= 4 && !GENERIC.has(words[0]) && !ADJ.has(words[0])) cands.push({ ph: words[0], full: false });
+      for (let k = 0; k < words.length; k++) {
+        const ph = words.slice(k).join(' ');
+        if (k > 0 && (GENERIC.has(ph) || ph.length < 4)) continue;
+        cands.push({ ph, full: k === 0 });
+      }
+    }
+    return cands;
+  }
+  function buildIndex(ings) {
+    const map = new Map();   // phrase -> Set(idx)
+    ings.forEach((ing, idx) => candidates(ing.item).forEach(({ ph, full }) => variants(ph).forEach((v) => {
+      if (!map.has(v)) map.set(v, new Map()); map.get(v).set(idx, full);
+    })));
+    const list = [];
+    for (const [ph, m] of map) {
+      let idx = null;
+      let full = false;
+      if (m.size === 1) { idx = [...m.keys()][0]; full = m.get(idx); }
+      else { const fulls = [...m].filter(([, f]) => f); if (fulls.length === 1) { idx = fulls[0][0]; full = true; } }
+      if (idx != null) list.push({ ph, idx, full });
+    }
+    const words = ings.map((ing) => new Set(ingNorm(ing.item).split(' ').filter((w) => w.length >= 4)));
+    list.sort((a, b) => b.ph.length - a.ph.length);
+    list.words = words;
+    return list;
+  }
+  const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  function annotate(step, index) {
+    const NEXT = /^\s+(mixture|mix|blend|coating|crust|seasoning)\b/;
+    const lower = step.toLowerCase(); const taken = new Array(step.length).fill(false); const hits = [];
+    const seen = new Set();
+    for (const { ph, idx, full } of index) {
+      if (seen.has(idx)) continue;
+      const re = new RegExp('(^|[^a-z])(' + escRe(ph) + ')(?![a-z])', 'g'); let m;
+      while ((m = re.exec(lower))) {
+        const s = m.index + m[1].length, e = s + ph.length;
+        if (taken.slice(s, e).some(Boolean)) continue;
+        if (!full) {
+          const prev = (lower.slice(0, s).match(/([a-z]+)\s+$/) || [])[1];
+          if (prev && !index.words[idx].has(prev) && index.words.some((w, k) => k !== idx && w.has(prev))) continue;
+        }
+        if (NEXT.test(lower.slice(e))) continue;
+        if (ph === 'pepper' && /salt(,)?( and)?\s+$/.test(lower.slice(Math.max(0, s - 12), s))) continue;
+        for (let i = s; i < e; i++) taken[i] = true;
+        hits.push({ end: e, idx }); seen.add(idx); break;
+      }
+    }
+    return hits.sort((a, b) => a.end - b.end);
+  }
+
   /* ---------- rendering: full recipe ---------- */
   const DETAIL_TABS = [['overview', 'Overview'], ['ingredients', 'Ingredients'], ['instructions', 'Instructions'], ['notes', 'Notes']];
 
@@ -677,7 +746,24 @@
       }).join('')}</ul>`;
     }
     if (tab === 'instructions') {
-      return `<ol class="steps">${r.instructions.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>`;
+      const index = buildIndex(r.ingredients);
+      const used = new Set();
+      const amtOf = (i) => { const a = ingredientRow(i).amt; return a === 'as needed' ? '' : a; };
+      const steps = r.instructions.map((s) => {
+        const hits = annotate(s, index);
+        let out = '', pos = 0;
+        hits.forEach((h) => {
+          used.add(h.idx);
+          out += esc(s.slice(pos, h.end));
+          const a = amtOf(r.ingredients[h.idx]);
+          if (a) out += `<span class="inl">${esc(a)}</span>`;
+          pos = h.end;
+        });
+        return `<li>${out + esc(s.slice(pos))}</li>`;
+      }).join('');
+      const rest = r.ingredients.filter((_, k) => !used.has(k));
+      const also = rest.length ? `<p class="also"><b>Also needed:</b> ${rest.map((i) => { const a = amtOf(i); return esc(i.item.replace(/,.*$/, '')) + (a ? ` (${esc(a)})` : ''); }).join(', ')}</p>` : '';
+      return `<ol class="steps">${steps}</ol>${also}`;
     }
     if (tab === 'notes') {
       const out = [];
