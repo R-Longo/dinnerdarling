@@ -210,7 +210,7 @@ svg { display: block; }
 .dots i { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--olive); }
 .dots i.on { background: var(--olive); }
 
-.sheet-actions { display: flex; gap: 10px; padding: 10px 20px calc(env(safe-area-inset-bottom, 0px) + 12px); background: var(--paper); border-top: 1.5px solid var(--line); }
+.sheet-actions { display: flex; gap: 10px; padding: 10px max(20px, calc((100% - 520px) / 2)) calc(env(safe-area-inset-bottom, 0px) + 12px); background: var(--paper); border-top: 1.5px solid var(--line); }
 .sheet-actions .act { min-height: 50px; }
 .sheet-actions .act.fav { flex: 1; }
 .sheet-actions .act.wk { flex: 1.4; }
