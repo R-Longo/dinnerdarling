@@ -4631,6 +4631,585 @@
       "method": "One pot, plus toasted bread",
       "flavor": "Savory, herby, cozy",
       "bestFor": "Cold nights"
+    },
+    {
+      "id": "lemon-parmesan-pastina",
+      "name": "Lemon Parmesan Pastina",
+      "description": "Tiny acini di pepe pasta toasted in olive oil, simmered in warm broth until brothy and creamy, then finished with lemon, Parmigiano-Reggiano, and butter.",
+      "protein": [
+        "vegetarian"
+      ],
+      "mealType": [
+        "pasta"
+      ],
+      "tags": [
+        "quick",
+        "creamy",
+        "comfort",
+        "one-pot",
+        "stovetop",
+        "weeknight",
+        "vegetarian"
+      ],
+      "timeMinutes": 20,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "acini di pepe pasta",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "lemons, zested",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "salt",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        },
+        {
+          "item": "chicken or vegetable stock, broth, or water, warmed",
+          "quantity": 3.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "lemon juice (about ½ lemon)",
+          "quantity": 0.5,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "grated Parmigiano-Reggiano, plus more for topping",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "unsalted butter",
+          "quantity": 4,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "black pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Warm the stock, broth, or water so it is ready to add. Zest the lemons and grate the cheese.",
+        "Heat a drizzle of olive oil in a pot over medium. Add the acini di pepe and toast, stirring, 2 to 3 minutes.",
+        "Stir in the zest of one lemon. Pour in about 1 cup of the warm liquid and simmer gently, stirring often. As it absorbs, keep adding liquid a little at a time until the pasta is al dente and still brothy.",
+        "Stir in the lemon juice and 1 cup of Parmigiano-Reggiano and cook about 1 minute. Take the pot off the heat, add the butter, and stir vigorously until creamy.",
+        "Rub a pinch of salt into the zest of the second lemon and mix it in. Season with pepper and top with more cheese."
+      ],
+      "dietaryNotes": [
+        "The recipe lists the zest of 2 lemons; one is stirred in while cooking and the other is rubbed with salt at the end",
+        "The recipe calls for 3½ to 4½ cups of liquid, depending on how brothy you like it",
+        "Made with chicken or vegetable stock, broth, or salted water"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "Toast the pasta first so it holds its shape. Keep the simmer low and add liquid gradually, and pull it while still loose since it thickens as it sits. Off the heat before the butter and cheese. Swaps: stelline or small orzo for the pasta; Grana Padano or Pecorino Romano (saltier) for the cheese; vegan butter and plant-based parmesan to make it dairy-free. Keeps 3 days in the fridge.",
+      "leftoverRating": null,
+      "source": {
+        "type": "published",
+        "name": "Food My Muse",
+        "author": "Nadia Aidi",
+        "title": "20-Minute Lemon Parmesan Pastina (Easy Acini di Pepe)",
+        "url": "https://foodmymuse.com/pastina/"
+      },
+      "art": "pasta",
+      "prepMinutes": 5,
+      "cookMinutes": 15,
+      "method": "One pot, stovetop",
+      "flavor": "Bright, creamy, cheesy",
+      "bestFor": "Quick comfort night"
+    },
+    {
+      "id": "tomato-pastina",
+      "name": "Tomato Pastina",
+      "description": "Acini di pepe toasted with shallot and garlic, simmered in hot stock with tomato paste, basil, tamari, and balsamic, and finished with Parmigiano Reggiano.",
+      "protein": [
+        "vegetarian"
+      ],
+      "mealType": [
+        "pasta"
+      ],
+      "tags": [
+        "quick",
+        "comfort",
+        "one-pot",
+        "stovetop",
+        "weeknight"
+      ],
+      "timeMinutes": 20,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": 2,
+      "ingredients": [
+        {
+          "item": "acini di pepe pasta",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "shallot, chopped",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "garlic clove, grated",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "chicken or vegetable stock, hot",
+          "quantity": 4.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "tomato paste, plus 1 tbsp more",
+          "quantity": 0.25,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "tamari or soy sauce",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "balsamic vinegar",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "fresh basil leaves",
+          "quantity": 10,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "grated Parmigiano Reggiano, plus more for topping",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        },
+        {
+          "item": "crushed red pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Heat the stock until hot and keep it nearby. Chop the shallot, grate the garlic, and grate the cheese.",
+        "Warm a drizzle of olive oil in a pot over medium. Toast the acini di pepe and shallot about 2 minutes.",
+        "Add the garlic and ¼ cup tomato paste and cook about 3 minutes.",
+        "Add the hot stock one cup at a time, seasoning with salt and pepper. Stir in the basil, tamari, balsamic, and the extra 1 tablespoon tomato paste, then simmer 9 to 12 minutes until the pasta is tender.",
+        "Stir in 1 cup of Parmigiano Reggiano for about 1 minute. Serve topped with more cheese, a drizzle of olive oil, black pepper, and crushed red pepper."
+      ],
+      "dietaryNotes": [
+        "Made with chicken or vegetable stock, so use vegetable stock to keep it vegetarian",
+        "Contains Parmigiano Reggiano"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "Add the stock one cup at a time. Any fresh herb can stand in for the basil, any cheese works for the Parmigiano, and the crushed red pepper can be left out.",
+      "leftoverRating": null,
+      "source": {
+        "type": "published",
+        "name": "Food My Muse",
+        "author": "Nadia Aidi",
+        "title": "Tomato Pastina",
+        "url": "https://foodmymuse.com/tomato-pastina/"
+      },
+      "art": "pasta",
+      "prepMinutes": 5,
+      "cookMinutes": 15,
+      "method": "One pot, stovetop",
+      "flavor": "Savory, tomato-rich, cheesy",
+      "bestFor": "Quick comfort night"
+    },
+    {
+      "id": "creamy-tomato-soup",
+      "name": "Creamy Tomato Soup",
+      "description": "Fresh tomatoes simmered with onion, carrots, and garlic in broth, blended smooth, and finished with heavy cream.",
+      "protein": [
+        "vegetarian"
+      ],
+      "mealType": [
+        "soup"
+      ],
+      "tags": [
+        "creamy",
+        "comfort",
+        "cozy",
+        "stovetop",
+        "fall"
+      ],
+      "timeMinutes": 45,
+      "difficulty": "easy",
+      "cost": "$$",
+      "servings": 6,
+      "ingredients": [
+        {
+          "item": "butter",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "extra virgin olive oil",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "yellow onion, chopped",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "produce"
+        },
+        {
+          "item": "medium to large carrots, chopped",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "garlic cloves, minced",
+          "quantity": 3,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "vine-ripened tomatoes, chopped (or about 42 oz canned tomatoes)",
+          "quantity": 3,
+          "unit": "lb",
+          "aisle": "produce"
+        },
+        {
+          "item": "tomato paste",
+          "quantity": 3,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "chicken broth (vegetable broth for vegetarian)",
+          "quantity": 3,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "heavy cream",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "fresh basil, chopped (or 2 tsp thyme or 2 tsp rosemary)",
+          "quantity": 2,
+          "unit": "tbsp",
+          "aisle": "produce"
+        },
+        {
+          "item": "black pepper",
+          "quantity": 0.25,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "kosher salt",
+          "quantity": 1.5,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "brown sugar",
+          "quantity": 2,
+          "unit": "tsp",
+          "aisle": "pantry"
+        }
+      ],
+      "instructions": [
+        "Chop the onion, carrots, and tomatoes and mince the garlic.",
+        "Melt the butter with the olive oil in a large pot over medium heat. Cook the onion about 5 minutes until soft.",
+        "Add the carrots and garlic and cook 4 to 5 minutes. Stir in the tomatoes and tomato paste and cook another 4 to 5 minutes.",
+        "Pour in the broth and add the herb, pepper, salt, and brown sugar. Bring to a boil, cover, reduce the heat, and simmer 30 minutes.",
+        "Blend the soup smooth in batches and return it to the pot. Stir in the cream and heat through, then taste and adjust the seasoning. Garnish with fresh herbs and pepper."
+      ],
+      "dietaryNotes": [
+        "Made with chicken broth; use vegetable broth to keep it vegetarian",
+        "Contains heavy cream; the source suggests a non-dairy cream for a vegan version"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "Stir in cooked rice for a heartier soup, or top with croutons. For a vegan version, use non-dairy cream; cashew milk gives a creamier result. A countertop blender gives the smoothest texture. Basil, thyme, or rosemary all work as the herb. The source does not say when to add the brown sugar; it is added with the broth here.",
+      "leftoverRating": null,
+      "source": {
+        "type": "published",
+        "name": "The Daring Gourmet",
+        "author": "Kimberly Killebrew",
+        "title": "Creamy Tomato Soup",
+        "url": "https://www.daringgourmet.com/creamy-tomato-soup/"
+      },
+      "art": "soup",
+      "prepMinutes": 10,
+      "cookMinutes": 35,
+      "method": "One pot, blended",
+      "flavor": "Rich, tomatoey, creamy",
+      "bestFor": "Cold nights"
+    },
+    {
+      "id": "pumpkin-squash-soup",
+      "name": "Pumpkin Squash Soup",
+      "description": "A simple, velvety soup of pumpkin or butternut squash simmered with onion and garlic in broth, blended smooth, and finished with cream.",
+      "protein": [
+        "vegetarian"
+      ],
+      "mealType": [
+        "soup"
+      ],
+      "tags": [
+        "creamy",
+        "comfort",
+        "cozy",
+        "fall",
+        "quick",
+        "stovetop"
+      ],
+      "timeMinutes": 15,
+      "difficulty": "easy",
+      "cost": "$",
+      "servings": "4–6",
+      "ingredients": [
+        {
+          "item": "pumpkin or butternut squash, unpeeled weight (about 1.2 kg)",
+          "quantity": 2.4,
+          "unit": "lb",
+          "aisle": "produce"
+        },
+        {
+          "item": "onion, sliced",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "garlic cloves, whole",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "low-sodium vegetable or chicken broth",
+          "quantity": 3,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "water",
+          "quantity": 1,
+          "unit": "cup",
+          "aisle": ""
+        },
+        {
+          "item": "salt and pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        },
+        {
+          "item": "cream, half-and-half, or milk, to finish",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        }
+      ],
+      "instructions": [
+        "Peel and seed the pumpkin and cut it into chunks about 1.5 inches wide. Slice the onion.",
+        "Add the pumpkin, onion, garlic, broth, and water to a pot. Bring to a simmer and cook uncovered about 10 minutes, until the pumpkin is tender.",
+        "Blend until completely smooth.",
+        "Return to low heat if needed. Season with salt and pepper and stir in ½ cup cream; do not let it boil.",
+        "Serve with a swirl of cream, black pepper, and parsley if you like, and crusty bread."
+      ],
+      "dietaryNotes": [
+        "Made with vegetable or chicken broth; use vegetable broth to keep it vegetarian",
+        "Cream can be swapped for half-and-half or milk (the source uses ½ to ¾ cup)"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "Butternut squash works in place of pumpkin, and 2 cans of pumpkin purée can replace the fresh pumpkin. Let the soup cool slightly before blending in a regular blender. Keeps 4 to 5 days in the fridge or 3 months in the freezer.",
+      "leftoverRating": null,
+      "source": {
+        "type": "published",
+        "name": "RecipeTin Eats",
+        "author": "Nagi Maehashi",
+        "title": "Pumpkin Soup (Classic and Easy)",
+        "url": "https://www.recipetineats.com/classic-pumpkin-soup/"
+      },
+      "art": "soup",
+      "prepMinutes": 5,
+      "cookMinutes": 10,
+      "method": "One pot, blended",
+      "flavor": "Smooth, sweet, savory",
+      "bestFor": "Cold nights"
+    },
+    {
+      "id": "mushroom-risotto",
+      "name": "Mushroom Risotto",
+      "description": "Creamy Arborio risotto with browned mixed mushrooms, thyme, white wine, and pecorino or Parmesan.",
+      "protein": [
+        "vegetarian"
+      ],
+      "mealType": [
+        "skillet"
+      ],
+      "tags": [
+        "risotto",
+        "creamy",
+        "comfort",
+        "stovetop",
+        "vegetarian",
+        "date-night"
+      ],
+      "timeMinutes": 45,
+      "difficulty": "medium",
+      "cost": "$$",
+      "servings": "4–6",
+      "ingredients": [
+        {
+          "item": "extra-virgin olive oil, divided",
+          "quantity": 4,
+          "unit": "tbsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "mixed mushrooms, chopped",
+          "quantity": 1.5,
+          "unit": "lb",
+          "aisle": "produce"
+        },
+        {
+          "item": "sea salt, divided, plus more to taste",
+          "quantity": 0.75,
+          "unit": "tsp",
+          "aisle": "pantry"
+        },
+        {
+          "item": "black pepper",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "pantry"
+        },
+        {
+          "item": "yellow onion, chopped",
+          "quantity": 1,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "garlic cloves, minced",
+          "quantity": 2,
+          "unit": "",
+          "aisle": "produce"
+        },
+        {
+          "item": "fresh thyme leaves",
+          "quantity": 1,
+          "unit": "tbsp",
+          "aisle": "produce"
+        },
+        {
+          "item": "Arborio rice, rinsed",
+          "quantity": 1.5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "dry white wine",
+          "quantity": 0.67,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "vegetable broth, warmed",
+          "quantity": 5,
+          "unit": "cup",
+          "aisle": "pantry"
+        },
+        {
+          "item": "grated pecorino or Parmesan, plus more for serving",
+          "quantity": 0.5,
+          "unit": "cup",
+          "aisle": "refrigerated"
+        },
+        {
+          "item": "fresh parsley, chopped, for garnish",
+          "quantity": 1,
+          "unit": "pinch",
+          "aisle": "produce"
+        }
+      ],
+      "instructions": [
+        "Warm the broth in a pot and keep it hot. Chop the mushrooms and onion, mince the garlic, and rinse the rice.",
+        "Heat 2 tablespoons of the olive oil in a large, deep skillet over medium-high. Add the mushrooms with ½ teaspoon of the salt and cook, stirring only occasionally, about 8 minutes until browned. Set aside and wipe out the pan.",
+        "Heat the remaining 2 tablespoons oil over medium. Cook the onion with ¼ teaspoon salt for 5 to 8 minutes until soft.",
+        "Add the garlic, thyme, and rice and stir for 1 minute. Pour in the wine and cook, stirring, 1 to 3 minutes until absorbed.",
+        "Add the warm broth about ¾ cup at a time, stirring often and letting each addition absorb before the next. With the last addition, stir in two-thirds of the mushrooms. Cook until creamy with a slight bite.",
+        "Stir in the cheese and season with salt and pepper. Top with the remaining mushrooms, parsley, and more cheese."
+      ],
+      "dietaryNotes": [
+        "Contains pecorino or Parmesan; skip it or use vegan Parmesan for a vegan version",
+        "Contains dry white wine"
+      ],
+      "makeItBougie": [],
+      "rebeccaNotes": "Don't over-stir the mushrooms so they brown, but do stir the risotto often. Leftovers keep 3 days and thicken as they sit, so loosen with water or stock when reheating. Pairs with spinach, green beans, broccoli, or a salad.",
+      "leftoverRating": null,
+      "source": {
+        "type": "published",
+        "name": "Love and Lemons",
+        "author": "Jeanine Donofrio",
+        "title": "Mushroom Risotto",
+        "url": "https://www.loveandlemons.com/mushroom-risotto/"
+      },
+      "art": "taco-bowl",
+      "prepMinutes": 15,
+      "cookMinutes": 30,
+      "method": "Skillet + risotto",
+      "flavor": "Creamy, earthy, savory",
+      "bestFor": "Cozy dinner"
     }
   ]
 }
